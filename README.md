@@ -2,8 +2,8 @@
 an 8 bit cpu
 
 # Specs
-data line of 8 bit
-addresses of 16
+- data line of 8 bit
+- addresses of 16
 
 # Commands
 ```
