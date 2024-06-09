@@ -29,7 +29,7 @@ F: NOP
 
 Other Instructions that has to be simulated
 CALL        RET         JZ      JLO     JH      JC      JEQ     JGE
-SET(CZVN)   CLR(CZVN)   INC     INCD    DEC     DECD    NOT     JMP
+SET(CZVN)   CLR(CZVN)   INC     INCD    DEC     DECD    NOT     JMP     shc shl shr     not
 ```
 # Registers
 ```
