@@ -51,3 +51,5 @@ Y    = indicates if its imm8/16; 0 if not; 1 if yes
 ZZZ  = indicates the dst register
 ```
 
+# Full diagram
+![text](Diagrams/Main-Diagram.drawio.png)
