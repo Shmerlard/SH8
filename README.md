@@ -6,7 +6,7 @@ data line of 8 bit
 addresses of 16
 
 # Commands
-
+```
 0: MOV  Ra/imm8     Rb          | Ra/imm8           -> Rb
 1: LDW  HL/imm16    Rb          | M[HL/imm16]       -> Rb
 2: STW  Ra          HL/imm16    | Ra                -> M[HL/imm16]
@@ -27,5 +27,5 @@ F: NOP
 Other Instructions that has to be simulated
 CALL        RET         JZ      JLO     JH      JC      JEQ     JGE
 SET(CZVN)   CLR(CZVN)   INC     INCD    DEC     DECD    NOT     JMP
-
+```
 #
