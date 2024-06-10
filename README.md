@@ -1,14 +1,19 @@
 # The shmerlard 8
 an 8 bit cpu
-a
-# Specs
+
+## Specs
 - data line of 8 bit
 - addresses of 16
 - 4 GP register
 
-# Contents
-1) [Registers](/Wiki/Registers.md)
-# Commands
+## Contents
+1) [Registers](/Wiki/Register-File.md)
+2) [Instruction Register](/Wiki/Instruction-Register.md)
+3) [ALU](/Wiki/ALU.md)
+4) [Control Unit](/Wiki/ControlUnit.md)
+5) [Memory Registers](/Wiki/Memory-Registers.md)
+
+## Instruction set
 ```
 0: MOV  Ra/imm8     Rb          | Ra/imm8           -> Rb
 1: LDW  HL/imm16    Rb          | M[HL/imm16]       -> Rb
@@ -33,9 +38,9 @@ Other Instructions that has to be simulated
 CALL        RET         JZ      JLO     JH      JC      JEQ     JGE
 SET(CZVN)   CLR(CZVN)   INC     INCD    DEC     DECD    NOT     JMP     shc shl shr     not
 ```
-# Registers
+## Registers
 ```
-0: PC       : Program Counter register
+0: SP       : STACK Pointer
 1: REG A    : GP
 2: REG B    : GP
 3: REG C    : GP
@@ -44,7 +49,20 @@ SET(CZVN)   CLR(CZVN)   INC     INCD    DEC     DECD    NOT     JMP     shc shl 
 6: REG H    : HIGH address register
 7: REG F    : FLAGS register
 ```
-# Instruction format
+## [Memory](/Wiki/Memory-Registers.md)
+the memory ranges from `0x0000` to `0xFFFF` since the adress is 16-bit.
+the memory is mapped in the following way:
+```
+0x0000 - 0x7FFF: GP ROM              (32KiB    ROM)
+0x8000 - 0xBFFF: GP RAM              (16KiB     RAM) 
+0xC000 - 0xCFFF: VRAM                (16KiB    RAM) #CURRENTLY NOT IN USE#
+0xD000 - 0xFDFF: NOT IN USE          (11.5KiB UNUSED)
+0xFE00 - 0xFEFF: STACK               (256B    STACK)
+0xFF00 - 0xFFFF: UNUSED              (256B    UNUSED)
+
+```
+
+## Instruction format
 The instruction register is an 8 bit register
 ```
 the format is XXXXYZZZ
