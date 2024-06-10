@@ -18,23 +18,26 @@ an 8 bit cpu
 0: MOV  Ra/imm8     Rb          | Ra/imm8           -> Rb
 1: LDW  HL/imm16    Rb          | M[HL/imm16]       -> Rb
 2: STW  Ra          HL/imm16    | Ra                -> M[HL/imm16]
-3: PUSH Ra/imm8                 | SP-- ; Ra/imm8    -> M[SP]
-4: POP  Ra                      | M[SP] -> Ra ; SP++
-5: LDA  imm16                   | imm16             -> HL
-6: CMP* Ra          Rb          | Rb - Ra
-7: JNZ                          | (Z != 0) : HL     -> PC
-8: INB  Ra                      | INR               -> Ra
-9: OUTB Ra                      | Ra                -> OUTR
-A: ADD* Ra/imm8     Rb          | Ra/imm8 + Rb      -> Rb
-B: ADC* Ra/imm8     Rb          | Ra/imm8 + Rb + C  -> Rb
-C: SBB* Ra/imm8     Rb          | Rb - Ra/imm8 - B  -> Rb
-D: OR   Ra/imm8     Rb          | Ra OR Rb          -> Rb
-E: AND  Ra/imm8     Rb          | Ra AND Rb         -> Rb
-F: NOP
+3: LDA  imm16                   | imm16             -> HL       
+4: CMP* ra          rb          | Rb - Ra           
+5: JNZ                          | (z != 0) : HL     -> PC   
+6: INB  ra                      | inr               -> Ra   
+7: OUTB ra                      | ra                -> OUTR 
+8: ADD* Ra/imm8     Rb          | Ra/imm8 + Rb      -> Rb   
+9: ADC* Ra/imm8     Rb          | Ra/imm8 + Rb + C  -> Rb   
+A: SBB* Ra/imm8     Rb          | Rb - Ra/imm8 - B  -> Rb   
+B: AND  Ra/imm8     Rb          | Ra AND Rb         -> Rb   
+C: OR   Ra/imm8     Rb          | Ra OR  Rb         -> Rb   
+D: XOR  Ra/imm8     Rb          | Ra XOR Rb         -> Rb 
+E: 
+F: NOP    
 
 (*) : FLAGS register is affected
 
 Other Instructions that has to be simulated
+3: PUSH Ra/imm8                 | SP-- ; Ra/imm8    -> M[SP]
+4: POP  Ra                      | M[SP] -> Ra ; SP++
+
 CALL        RET         JZ      JLO     JH      JC      JEQ     JGE
 SET(CZVN)   CLR(CZVN)   INC     INCD    DEC     DECD    NOT     JMP     shc shl shr     not
 ```
@@ -63,13 +66,16 @@ the memory is mapped in the following way:
 ```
 
 ## Instruction format
-The instruction register is an 8 bit register
+The instruction register is a 16-bit register
 ```
-the format is XXXXYZZZ
+the format is XXXX-YZZZ-AAAA-ASSS
 XXXX = the opcode of the instruction
-Y    = indicates if its imm8/16; 0 if not; 1 if yes
+Y    = indicates if the instruction uses immediate addressing mode 
+       0 if not; 1 if yes
 ZZZ  = indicates the dst register
+A-S  = indicates the source value or register; dependes on the Y bit.
+
 ```
 
 # Full diagram
-![text](Diagrams/Main-Diagram.drawio.png)
+![text](Diagrams/Main-Diagram.jpg)
