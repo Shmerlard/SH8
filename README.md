@@ -1,10 +1,14 @@
 # The shmerlard 16
-an 8 bit cpu
+a 16 bit cpu based on the msp430 the jdh8 and the src cpu.
+I used logisim for the logic design, draw.io for the diagrams.
+
 
 ## Specs
 - a common 16-bit data and address bus 
-- 4 GP register
-
+- a total of 128kB of usable memory
+- 6 GP register
+- modular design for easy troubleshooting
+- port for outside connections
 ## Contents
 1) [Registers](/Wiki/Register-File.md)
 2) [Instruction Register](/Wiki/Instruction-Register.md)
