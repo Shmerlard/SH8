@@ -78,4 +78,4 @@ A-S  = indicates the source value or register; dependes on the Y bit.
 ```
 
 # Full diagram
-![text](Diagrams/Main-Diagram.jpg)
+![text](Diagrams/Main-Diagram.png)
