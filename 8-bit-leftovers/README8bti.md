@@ -12,37 +12,24 @@ an 8 bit cpu
 4) [Control Unit](/Wiki/ControlUnit.md)
 5) [Memory Registers](/Wiki/Memory-Registers.md)
 
-## Instruction set
+## Instruction set (DEPRECTED)
 ```
-0x00:  NOP
-0x01:  MOV  Ra/#, Rb       | Ra/# -> Rb
-0x02:  LD   Ra/#, Rb       | M[Ra/#] -> Rb
-0x03:  ST   Ra,   Rb/#     | Ra -> M[Rb/#]
-0x04:  PUSH Ra/#           | SP - 2 -> SP; Ra/# -> @SP
-0x05:  POP  Ra             | @SP -> Ra; SP + 2 -> SP
---- Arithmetic instructions ---
-0x06:  ADD  Ra/#, Rb       | Ra/# + Rb -> Rb
-0x07:  ADDC Ra/#, Rb       | Ra/# + Rb + c -> Rb
-0x08:  SUB  Ra/#, Rb       | Rb - Ra/#-> Rb
-0x09:  RRA  Ra/#, Rb       | RRA Rb (Ra/# times) -> Rb
-0x0A:  RRC  Ra/#, Rb       | RRC Rb (Ra/# times) -> Rb
---- Jumps and Subroutiness  ---
-0x0B:  CALL DST            | SP - 2 -> SP; PC -> @SP; DST -> PC;   
-0x0C:  RET                 | @SP -> PC; SP + 2  -> SP;             
-0x0D:  CMP  Ra/#, Rb       | Rb - Ra/#                             
-0x0E:  JMP  DST            | DST -> PC                             
-0x0F:  JEQ  DST            | (Z = 1): DST -> PC                        
-0x10:  JHS  DST            | (C = 1): DST -> PC                        
---- Logical operations      ---
-0x11:  AND  Ra/#, Rb       | Ra/# AND Rb -> Rb
-0x12:  OR   Ra/#, Rb       | Ra/# OR  Rb -> Rb                  
-0x13:  XOR  Ra/#, Rb       | Ra/# XOR Rb -> Rb
---- Input and output        ---
-0x14:  IOR  Ra             | IOR -> Ra
-0x15:  IOW  Ra/#           | Ra  -> IOR
-0x16:           
-0x17:         
-0x18:                
+0: MOV  Ra/imm8     Rb          | Ra/imm8           -> Rb
+1: LDW  HL/imm16    Rb          | M[HL/imm16]       -> Rb
+2: STW  Ra          HL/imm16    | Ra                -> M[HL/imm16]
+3: LDA  imm16                   | imm16             -> HL       
+4: CMP* ra          rb          | Rb - Ra           
+5: JNZ                          | (z != 0) : HL     -> PC   
+6: INB  ra                      | inr               -> Ra   
+7: OUTB ra                      | ra                -> OUTR 
+8: ADD* Ra/imm8     Rb          | Ra/imm8 + Rb      -> Rb   
+9: ADC* Ra/imm8     Rb          | Ra/imm8 + Rb + C  -> Rb   
+    A: SUB* Ra/imm8     Rb          | Rb - Ra/imm8      -> Rb   
+B: AND  Ra/imm8     Rb          | Ra AND Rb         -> Rb   
+C: OR   Ra/imm8     Rb          | Ra OR  Rb         -> Rb   
+D: XOR  Ra/imm8     Rb          | Ra XOR Rb         -> Rb 
+E: 
+F: NOP    
 
 (*) : FLAGS register is affected
 
