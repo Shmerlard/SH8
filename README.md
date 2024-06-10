@@ -6,6 +6,8 @@ an 8 bit cpu
 - addresses of 16
 - 4 GP register
 
+# Contents
+1) [Registers](/Wiki/Registers.md)
 # Commands
 ```
 0: MOV  Ra/imm8     Rb          | Ra/imm8           -> Rb
