@@ -52,7 +52,7 @@ an 8 bit cpu
 3: REG B    : GP
 4: REG C    : GP
 5: REG D    : GP
-6: REG H    : GP
+6: REG E    : GP
 7: REG F    : GP
 ```
 ## [Memory](/Wiki/Memory-Registers.md)
@@ -80,8 +80,8 @@ D = indicates the destination register
 the following addressing modes are available:
 00: Registor mode    | MOV R2,R3
 01: Indirect mode    | MOV @R3,@R4
-02: Immediate mode   | MOV #42,R1
-04: UNUSED (maybe use of offset or auto increment)
+10: Immediate mode   | MOV #42,R1
+11: UNUSED (maybe use of offset or auto increment)
 ```
 
 # Full diagram
