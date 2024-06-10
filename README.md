@@ -43,56 +43,45 @@ an 8 bit cpu
 0x16:           
 0x17:         
 0x18:                
-
-(*) : FLAGS register is affected
-
-Other Instructions that has to be simulated
-INC  Ra                         | Ra + 1 -> Ra | ADD #0x1   Ra
-DEC  Ra                         | Ra - 1 -> Ra | SUB Ra     #0x1
-INCD Ra                         | Ra + 2 -> Ra | ADD #2     Ra
-DECD Ra                         | Ra - 2 -> Ra | SUB Ra     #2
-NOT  Ra Rb                      | NOT Ra -> Rb | XOR #0xFF  Ra
-
-PUSH Ra/imm8                 | SP-- ; Ra/imm8    -> M[SP]
-POP  Ra                      | M[SP] -> Ra ; SP++
-
-CALL        RET         JZ      JLO     JH      JC      JEQ     JGE
-SET(CZVN)   CLR(CZVN)   INC        NOT     JMP     shc shl shr     
 ```
 ## Registers
 ```
-0: SP       : STACK Pointer
-1: REG A    : GP
-2: REG B    : GP
-3: REG C    : GP
-4: REG D    : GP
-5: REG L    : LOW address register
-6: REG H    : HIGH address register
-7: REG F    : FLAGS register
+0: SP       : STACK pointer
+1: REG S    : Status register
+2: REG A    : GP / Constant generator
+3: REG B    : GP
+4: REG C    : GP
+5: REG D    : GP
+6: REG H    : GP
+7: REG F    : GP
 ```
 ## [Memory](/Wiki/Memory-Registers.md)
-the memory ranges from `0x0000` to `0xFFFF` since the adress is 16-bit.
+the memory ranges from `0x0000` to `0xFFFF`.
 the memory is mapped in the following way:
 ```
 0x0000 - 0x7FFF: GP ROM              (32KiB    ROM)
-0x8000 - 0xBFFF: GP RAM              (16KiB     RAM) 
-0xC000 - 0xCFFF: VRAM                (16KiB    RAM) #CURRENTLY NOT IN USE#
-0xD000 - 0xFDFF: NOT IN USE          (11.5KiB UNUSED)
-0xFE00 - 0xFEFF: STACK               (256B    STACK)
-0xFF00 - 0xFFFF: UNUSED              (256B    UNUSED)
+0x8000 - 0xBFFF: GP RAM              (16KiB    RAM) 
+0xC000 - 0xCFFF: VRAM                (4KiB    RAM) #CURRENTLY NOT IN USE#
+0xD000 - 0xFFFF: NOT IN USE          (12KiB UNUSED)
+
 
 ```
 
 ## Instruction format
 The instruction register is a 16-bit register
 ```
-the format is XXXXX-SSS-DDD-AA-D-FF
-XXXX = the opcode of the instruction
-Y    = indicates if the instruction uses immediate addressing mode 
-       0 if not; 1 if yes
-ZZZ  = indicates the dst register
-A-S  = indicates the source value or register; dependes on the Y bit.
+the format is XXXX-XSSS-AABB-FDDD
+X = the opcode of the instruction
+S = indicates the source register
+A = indicates the addressing mode of the source
+B = indicates the addressing mode of the destination
+D = indicates the destination register
 
+the following addressing modes are available:
+00: Registor mode    | MOV R2,R3
+01: Indirect mode    | MOV @R3,@R4
+02: Immediate mode   | MOV #42,R1
+04: UNUSED (maybe use of offset or auto increment)
 ```
 
 # Full diagram
