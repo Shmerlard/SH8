@@ -85,4 +85,4 @@ the following addressing modes are available:
 ```
 
 # Full diagram
-![text](Diagrams/Main-Diagram.png)
+![text](Diagrams/Main-Diagram.jpg)
