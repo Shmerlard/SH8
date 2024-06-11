@@ -8,5 +8,5 @@ the alu has the folowing control lines:
 3:  OR
 4:  XOR
 5:  NOT
-6:  C=B
+6:  Y=B
 ```

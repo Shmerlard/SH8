@@ -9,7 +9,7 @@ the register file contains the following registers:
                   0: (C) Carry flag
                   1: (Z) Zero flag
                   2: (N) Negative flag
-                  3: (O) Over floaw flag
+                  3: (O) Over flow flag
 
 2-7 : REG A-F   | 6 GP 16 bit registers
 ```

@@ -50,7 +50,7 @@ I used logisim for the logic design, draw.io for the diagrams.
 ```
 ## Registers
 ```
-0: SP       : STACK pointer
+0: SP       : STACK pointer    ###naming!!
 1: REG S    : Status register
 2: REG A    : GP / Constant generator
 3: REG B    : GP
