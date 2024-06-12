@@ -16,7 +16,17 @@ the following addressing modes are available:
 10: Immediate mode   | MOV #42,R1
 11: UNUSED (maybe use of offset or auto increment)
 ```
-
+## Addressing modes 
+```
+000: Ra  Rb  | Reg - Reg Addressing            | Ra -> Rb
+001: Ra  @Rb | Reg - Indirect Addressing       | R[Ra] -> M[Rb]
+010: @Ra Rb  | Indirect - Reg Addressing       | M[Ra] -> Rb
+011: @Rb @Rb | Indirect - Inderect Addressing  | M[Ra] -> M[Rb]
+100: #N  Rb  | Immediate - Register Addressing | N -> Rb
+101: #N  @Rb | Immediate - Indirect Addressing | N -> M[Rb]
+110: N   Rb  | Direct - Register Addressing    | M[N] -> Rb
+111: Ra  N   | Register - Direct Addressing    | Ra -> M[N]
+```
 ### how fetching is obtained?
 ```
 1) PC    -> MAR; PC++  | PCout, MARin, PCinc
@@ -27,31 +37,4 @@ the following addressing modes are available:
 #### NOP 
 ```
 4) END
-```
-#### MOV
-```
-if Ra, Rb:
-4) Ra -> Y              | RFrd, Yin, Y=B
-5) Y  -> Rb             | RFwr, DSTsel, Yout, END
-
-if #,  Rb:
-4) PC -> MAR; PC++      | PCout, MARwr, PCinc
-5) M[MA] -> MD          | MEMsel, MDRin
-6) MD -> Rb             | MDRout, DSTsel, IRin,END
-
-if @Ra,Rb:
-4) Ra -> MAR
-5) M[MA] -> MD
-6) MD -> Rb
-
-if @Ra, @Rb
-4) Ra -> MAR
-5) M[MA] -> MD; #might reduce if MAR is master-slave
-6) Ra -> MAR
-7) MD - M[MA]
-
-if Ra, @Rb
-4) Rb -> MAR
-5) Ra -> MD
-6) MD -> M[MAR]
 ```

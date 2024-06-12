@@ -21,7 +21,7 @@ I used logisim for the logic design, draw.io for the diagrams.
 0x00:  NOP
 0x01:  MOV  Ra/#, Rb       | Ra/# -> Rb
 0x02:  LD   Ra/#, Rb       | M[Ra/#] -> Rb
-0x03:  ST   Ra,   Rb/#     | Ra -> M[Rb/#]
+0x03:  ST   Ra/#, Rb       | Rb -> M[Ra/#] ## might change the order of Ra Rb ##
 0x04:  PUSH Ra/#           | SP - 2 -> SP; Ra/# -> @SP
 0x05:  POP  Ra             | @SP -> Ra; SP + 2 -> SP
 --- Arithmetic instructions ---
@@ -74,19 +74,13 @@ the memory is mapped in the following way:
 ## Instruction format
 The instruction register is a 16-bit register
 ```
-the format is XXXX-XSSS-AABB-FDDD
+the format is XXXX-XSSS-SAAA-DDDD
 X = the opcode of the instruction
 S = indicates the source register
-A = indicates the addressing mode of the source
-B = indicates the addressing mode of the destination
+A = indicates the addressing mode 
 D = indicates the destination register
 
-the following addressing modes are available:
-00: Registor mode    | MOV R2,R3
-01: Indirect mode    | MOV @R3,@R4
-10: Immediate mode   | MOV #42,R1
-11: UNUSED (maybe use of offset or auto increment)
 ```
-
+(see [addressing modes](/Wiki/Instruction-Register.md#addressing-modes))
 # Full diagram
 ![text](Diagrams/Main-Diagram.jpg)
