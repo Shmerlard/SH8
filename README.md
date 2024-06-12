@@ -81,6 +81,10 @@ A = indicates the addressing mode (^)
 D = indicates the destination register
 ```
 (^) (see [addressing modes](/Wiki/Instruction-Register.md#addressing-modes)) for more info
+## Current problems:
+1) How to load flags to the flags register?
+2) How many EEPROMS are needed?
+3) Whats the difference between my ram and logisim ram? 
 
-# Full diagram
+## Full diagram
 ![text](Diagrams/Main-Diagram.jpg)

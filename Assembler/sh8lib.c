@@ -14,8 +14,10 @@ enum ctrlLines {
 };
 */
 #include "sh8lib.h"
-
-//const unsigned char CTRLSIZE = 8;
+#include <string.h>
+#include <stdio.h>
+#define PCin  = 0b00;
+#define PCout = 0b10;
 
 char ctrlLines[CTRLSIZE][10] = {
         "PCin",
@@ -28,18 +30,19 @@ char ctrlLines[CTRLSIZE][10] = {
         "IRout"
 };
 
-int ctrl_lines_to_bin(char** pinput,int* plength) {
+int ctrl_lines_to_bin(char* input[],int length) {
+    //int length1 = sizeof(input[0])/sizeof(input[0][0]);
+    //printf("%d\n",length1);
     int output = 0;
-    return 3;
-    /*
-    for(int i = 0;i < *plength; i++){
-        for(int j = 0; j<CTRLSIZE;j++){
-            if(input[i] == ctrlLines[j]){
+    
+    for(int i = 0;i < length; i++){
+        for(int j = 0; j < CTRLSIZE;j++){
+            if(strcmp(input[i],ctrlLines[j]) ==0){
                 output = output + (1 << j);
                 //break;
             }
         }
     }
-    */
-    //return output;
+    
+    return output;
 }
