@@ -48,7 +48,7 @@ I used logisim for the logic design, draw.io for the diagrams.
 0x17:         
 0x18:                
 ```
-## Registers
+## [Registers](/Wiki/Register-File.md)
 ```
 0: SP       : STACK pointer    ###naming!!
 1: REG S    : Status register
@@ -71,16 +71,16 @@ the memory is mapped in the following way:
 
 ```
 
-## Instruction format
+## [Instruction format](/Wiki/Instruction-Register.md)
 The instruction register is a 16-bit register
 ```
 the format is XXXX-XSSS-SAAA-DDDD
 X = the opcode of the instruction
 S = indicates the source register
-A = indicates the addressing mode 
+A = indicates the addressing mode (^) 
 D = indicates the destination register
-
 ```
-(see [addressing modes](/Wiki/Instruction-Register.md#addressing-modes))
+(^) (see [addressing modes](/Wiki/Instruction-Register.md#addressing-modes)) for more info
+
 # Full diagram
 ![text](Diagrams/Main-Diagram.jpg)

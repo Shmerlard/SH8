@@ -1,29 +1,47 @@
 #### MOV
 ```
-if Ra, Rb: (0x0)
+0: Ra Rb:
 4) Ra -> Y              | RFrd, Yin, Y=B
 5) Y  -> Rb             | RFwr, DSTsel, Yout, END
 
-if Ra, @Rb (0x1)
+1: Ra @Rb:
 4) Rb -> MAR
 5) Ra -> MD
 6) MD -> M[MAR]
 
-if @Ra,Rb: (0x4)
+2: @Ra Rb:
 4) Ra -> MAR
 5) M[MA] -> MD
 6) MD -> Rb
 
-if @Ra, @Rb (0x5)
+3: @Ra @Rb
 4) Ra -> MAR
 5) M[MA] -> MD; #might reduce if MAR is master-slave
 6) Ra -> MAR
 7) MD - M[MA]
 
-if #,  Rb:  (0x8)
+4: #N Rb:
 4) PC -> MAR; PC++      | PCout, MARwr, PCinc
 5) M[MA] -> MD          | MEMsel, MDRin
 6) MD -> Rb             | MDRout, DSTsel, IRin,END
 
-if #, @Rb: (0x9)
+5: #N, @Rb:
+4) PC -> MAR; PC++
+5) M[MAR] -> MD; Rb -> MAR*
+6) MD -> M[MAR]
+(^) caution: MAR has to be Master slave
+
+6: N, Rb:
+4) PC -> MAR; PC++
+5) M[MAR] -> MD
+6) MD -> MAR
+7) M[MAR] -> MD
+8) MD -> Rb
+
+7: Ra, N:
+4) PC -> MAR; PC++
+5) M[MAR] -> MD
+6) MD -> MAR
+7) Ra -> MD
+8) MD -> M[MAR]
 ```

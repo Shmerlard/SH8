@@ -3,19 +3,13 @@
 ## Instruction format
 The instruction register is a 16-bit register
 ```
-the format is XXXX-XSSS-AABB-FDDD
+the format is XXXX-XSSS-SAAA-DDDD
 X = the opcode of the instruction
 S = indicates the source register
-A = indicates the addressing mode of the source
-B = indicates the addressing mode of the destination
+A = indicates the addressing mode 
 D = indicates the destination register
-
-the following addressing modes are available:
-00: Registor mode    | MOV R2,R3
-01: Indirect mode    | MOV @R3,@R4
-10: Immediate mode   | MOV #42,R1
-11: UNUSED (maybe use of offset or auto increment)
 ```
+
 ## Addressing modes 
 ```
 000: Ra  Rb  | Reg - Reg Addressing            | Ra -> Rb
