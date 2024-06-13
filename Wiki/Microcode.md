@@ -6,6 +6,7 @@ PROGRAM COUNTER:
     PCin
     PCout
     PCinc
+    
 REGISTER FILE:
     RFin
     RFout
@@ -19,12 +20,26 @@ ALU:
     Yin
     Yout
     Xin
-    Y=B
-    ADD
-    ???
+    ALUctrl[0]
+    ALUctrl[1]
+    ALUctrl[2]
 
 MEMORY REGISTERS:
     MARin
-    MEMsel
     MDRin
+    MDout
+    MEMsel
+    WRsel
+
+TIMING CONTROL:
+    TCend
+
+CONDITION CONTROL:
+    CONin
+
+OPTIONAL (not yet implemnted):
+    HLT
+    IOR
+    IOW
+
 ```

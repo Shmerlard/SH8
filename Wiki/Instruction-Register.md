@@ -3,10 +3,10 @@
 ## Instruction format
 The instruction register is a 16-bit register
 ```
-the format is XXXX-XSSS-SAAA-DDDD
+the format is XXXX-XAAA-SSSS-DDDD
 X = the opcode of the instruction
-S = indicates the source register
 A = indicates the addressing mode 
+S = indicates the source register
 D = indicates the destination register
 ```
 
