@@ -28,6 +28,22 @@ D = indicates the destination register
 3) MD    -> IR         | MDRoe, IRin
 ```
 
+### RTN
+```
+(Rx)  Referce to the data inside register x
+(M[Rx]) Referce to the data at the with the address Rx
+
+(A ->  B) A is moving to B
+(A &   B) A bitwise AND B
+(A ||  B) A bitwise OR B
+(NOT A  ) A bitwise NOT
+(A XOR B) A bitwise XOR B
+(A >>  B) A is shifted right bitwise B times (MSB of A becomes 0 each shift)
+(A <<  B) A is shifted left bitwise B times (LSB of A becomes 0 each shift)
+(A RR  B) A is rotated right B times
+(A RL  B) A is rotated left B times
+
+```
 #### NOP 
 ```
 4) END

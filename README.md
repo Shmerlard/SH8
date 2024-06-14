@@ -89,9 +89,10 @@ D = indicates the destination register
 ```
 (see [addressing modes](/Wiki/Instruction-Register.md#addressing-modes)) for more info
 
-## Current problems:
+## TODOS
 1) Whats the difference between my ram and logisim ram? 
 2) Solve the shifter problem
+3) Implement the HLT mechanic
 
 ## Full diagram
 ![text](Diagrams/Main-Diagram.jpg)
