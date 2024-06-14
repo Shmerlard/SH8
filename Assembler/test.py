@@ -2,9 +2,22 @@ from sh8lib import *
 
 ctrlTest = [
     "PCin",
-    "DSTsel"
+    "DSTsel",
+    "MEMsel",
+    "Yout",
+    "Yin",
+    "OR",
 ]
-print(ctrl_lines_to_binary(ctrlTest))
+str1 = "Yin DSTsel OR RFout"
+print(str1)
+arr1 = line_to_list_of_strings(str1)
+print(arr1)
+arr2 = ctrl_lines_from_list(arr1)
+print(arr2)
+arr3 = ctrl_lines_to_binary(arr2)
+print(arr3)
+h_arr3 = [hex(num) for num in arr3]
+print(h_arr3)
+print(hex(59))
 
-test = "PCin DSTsel Yin"
-print(ctrl_lines_to_binary(line_to_list_of_strings(test)))
+print(get_address_from_input(True,True,7,31,15))

@@ -13,6 +13,8 @@ the alu has the folowing control lines:
 8:  SHR
 9:  SHRC
 0xA: Y=X
+0xB: INCX
+0xC: DECX
 ```
 according to the [datasheet](/Datasheets/74181.pdf) we are going to need the following:
 ```
@@ -24,9 +26,11 @@ according to the [datasheet](/Datasheets/74181.pdf) we are going to need the fol
 0x5: Y=B : F = B               : S = 0xA; M = 1;
 0x6: AND : F = AB              : S = 0xB; M = 1;
 0x7: OR  : F = A OR    B       : S = 0xE; M = 1;
-0x8: SHR : Shift right
-0x9: SHRC: Shift right cyclic
-0xA: Y=A : 
+0x8: SHR : Shift right         : S = 0xF; M = 1; SH_EN = 1; CYC_EN = 0
+0x9: SHRC: Shift right cyclic  : S = 0xF; M = 1; SH_EN = 1; CYC_EN = 1
+0xA: Y=A :                     : S = 0xF; M = 1; SH_EN = 0;
+0xB: Y=INCX:                    : S = 0x0; M = 0; SH_EN = 0; %  CARRY_EN = 0 
+0xC: Y=DECX:                    : S = 0xF; M = 0; SH_EN = 0; CARRY_EN = 0
 ```
 
 ## the shifting mechanic

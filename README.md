@@ -29,7 +29,7 @@ I used logisim for the logic design, draw.io for the diagrams.
 0x06:  ADD  Ra/#, Rb       | Ra/# + Rb -> Rb
 0x07:  ADDC Ra/#, Rb       | Ra/# + Rb + c -> Rb
 0x08:  SUB  Ra/#, Rb       | Rb - Ra/#-> Rb
-0x09:  RRA  Ra/#, Rb       | RRA Rb (Ra/# times) -> Rb
+0x09:  SHR  Ra/#, Rb       | SHR Rb (Ra/# times) -> Rb
 0x0A:  RRC  Ra/#, Rb       | RRC Rb (Ra/# times) -> Rb
 ---------------------- Subroutiness  ---
 0x0B:  CALL DST            | SP - 1 -> SP; PC -> @SP; DST -> PC;   
@@ -91,7 +91,7 @@ D = indicates the destination register
 
 ## TODOS
 1) Whats the difference between my ram and logisim ram? 
-2) Solve the shifter problem
+2) Implement more jmp conditions
 3) Implement the HLT mechanic
 
 ## Full diagram
