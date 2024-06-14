@@ -23,9 +23,9 @@ D = indicates the destination register
 ```
 ### how fetching is obtained?
 ```
-1) PC    -> MAR; PC++  | PCout, MARin, PCinc
-2) M[MA] -> MD         | MDRwe, Msel, ??? depends on mem module
-3) MD    -> IR         | MDRoe, IRin
+T0) PC    -> MAR; PC++  | PCout, MARin, PCinc
+T1) M[MA] -> MD         | MDRen, MEMsel, 
+T2) MD    -> IR         | MDRen, IRin WRsel
 ```
 
 ### RTN

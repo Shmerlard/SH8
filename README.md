@@ -32,7 +32,7 @@ I used logisim for the logic design, draw.io for the diagrams.
 0x09:  SHR  Ra/#, Rb       | SHR Rb (Ra/# times) -> Rb
 0x0A:  RRC  Ra/#, Rb       | RRC Rb (Ra/# times) -> Rb
 ---------------------- Subroutiness  ---
-0x0B:  CALL DST            | SP - 1 -> SP; PC -> @SP; DST -> PC;   
+0x0B:  CALL DST            | SP - 1 -> SP; PC -> @o match any number of path segments, including nono match any number of path segments, including nonSP; DST -> PC;   
 0x0C:  RET                 | @SP -> PC; SP + 1  -> SP;             
 0x0D:  CMP  Ra/#, Rb       | Rb - Ra/#                             
 0x0E:                               
