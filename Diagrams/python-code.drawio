@@ -1,0 +1,33 @@
+<mxfile host="Electron" modified="2024-06-14T22:31:31.777Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.8 Chrome/124.0.6367.243 Electron/30.1.0 Safari/537.36" etag="PUHATO4zzwrB3JLgoGGg" version="24.4.8" type="device">
+  <diagram name="Page-1" id="33p9c_Dv4-LXukwUyH1e">
+    <mxGraphModel dx="956" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BBoyX6LbM5YNqfbZjwTt-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BBoyX6LbM5YNqfbZjwTt-1" target="BBoyX6LbM5YNqfbZjwTt-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BBoyX6LbM5YNqfbZjwTt-1" value="string of ctrl lines:&lt;div&gt;&quot;Yin DSTsel OR RFout&quot;&lt;span style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=jetbrains mono;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="BBoyX6LbM5YNqfbZjwTt-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BBoyX6LbM5YNqfbZjwTt-7" target="BBoyX6LbM5YNqfbZjwTt-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BBoyX6LbM5YNqfbZjwTt-7" value="an array of those lines:&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;[&quot;Yin&quot;, &quot;DSTsel&quot;, &quot;OR&quot;, RFout&quot;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=jetbrains mono;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="BBoyX6LbM5YNqfbZjwTt-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BBoyX6LbM5YNqfbZjwTt-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BBoyX6LbM5YNqfbZjwTt-10" value="replacing each alu ctrl with matching ctrl:&lt;div&gt;&lt;font style=&quot;font-size: 7px;&quot;&gt;[&#39;Yin&#39;, &#39;DSTsel&#39;, &#39;RFout&#39;, &#39;ALUctrl[0]&#39;, &#39;ALUctrl[1]&#39;, &#39;ALUctrl[2]&#39;]&lt;/font&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=jetbrains mono;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="BBoyX6LbM5YNqfbZjwTt-13" value="find the matching code for each eeprom&lt;div&gt;[48, 0, 58, 0]&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=jetbrains mono;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="200" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

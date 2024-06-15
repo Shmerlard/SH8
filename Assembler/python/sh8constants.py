@@ -46,6 +46,10 @@ ctrlLines = [
     ctrlLines_EEPROM3
 ]
 
+allCtrlLines = []
+for c in ctrlLines:
+    allCtrlLines += c
+
 aluCtrlLines = [
     "ADD",
     "ADDC",
@@ -97,7 +101,14 @@ instructionSet = [
     "UNDEFINED31"
 
 ]
+
 ADDR_MODE_MAX = 7
 OPCODE_MAX = 31
 TC_T_MAX = 15
-LAST_ADDRESS = 32767
+
+CON_SHIFT_AMOUNT = 13
+SC_SHIFT_AMOUNT = 12
+ADDR_MODE_SHIFT_AMOUNT = 9
+OPCODE_SHIFT_AMOUNT = 4
+
+ADDRESS_COUNT = 32768

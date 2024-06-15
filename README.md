@@ -42,10 +42,10 @@ I used logisim for the logic design, draw.io for the diagrams.
 0x11:  AND  Ra/#, Rb       | Ra/# AND Rb -> Rb
 0x12:  OR   Ra/#, Rb       | Ra/# OR  Rb -> Rb                  
 0x13:  XOR  Ra/#, Rb       | Ra/# XOR Rb -> Rb
+0x14:  NOT  Ra Rb          | NOT Ra -> Rb
 --- Input and output        ---
-0x14:  IOR  Ra             | IOR -> Ra
-0x15:  IOW  Ra/#           | Ra  -> IOR
-0x16:           
+0x15:  IOR  Ra             | IOR -> Ra
+0x16:  IOW  Ra/#           | Ra  -> IOR         
 0x17:         
 ----------------------Conditional Jumps --------------------------
 0x18:  JMP  DST            | DST -> PC  

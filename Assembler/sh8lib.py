@@ -93,3 +93,9 @@ def write_to_array_from_address(arr: list,
                     for timeItem in timeList:
                         addressItem = get_address_from_input(conItem,scItem,modeItem,opcodeItem,timeItem)
                         arr[addressItem] = data
+
+def get_opcode_from_instruction(st: str):
+    id = -1
+    for count, item in enumerate(instructionSet,start=0):
+        if st == item:
+            return count
