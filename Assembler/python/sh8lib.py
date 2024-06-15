@@ -52,7 +52,7 @@ def get_address_from_input(con: bool,
 # create a file with the format for each array
 def write_to_file_from_array(arr_of_arr: list):
     for count, arr in enumerate(arr_of_arr):
-        with open(f'out{count}.txt','w+') as outfile:
+        with open(f'outfiles/out{count}.txt','w+') as outfile:
             outfile.write("v3.0 hex words addressed\n")
             for i in range(ADDRESS_COUNT):
                 if(i % 16 == 0):

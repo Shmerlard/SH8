@@ -1,4 +1,5 @@
 .vscode
+venv
 .$Main-Diagram.drawio.bkp
 .$Main-Diagram.drawio.dtmp
 .$Main-Diagram.drawio.bkp
@@ -12,3 +13,4 @@
 .directory
 Logisim/Shmerlard8 (1).circ
 Logisim/Shmerlard8 copy.circ
+Assembler/.~lock.Microcode.xlsx\#
