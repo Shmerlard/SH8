@@ -93,6 +93,9 @@ D = indicates the destination register
 1) Whats the difference between my ram and logisim ram? 
 2) Implement more jmp conditions
 3) Implement the HLT mechanic
-
+4) relative addressing in the assembler
+5) implement another adressing mode for low memory
+6) add an option to correct mistakes in the excel
+7) solve the carry problem
 ## Full diagram
 ![text](Diagrams/Main-Diagram.jpg)

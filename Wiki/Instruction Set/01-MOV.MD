@@ -1,5 +1,37 @@
 #### MOV
 ```
+
+0: Ra Rb    |
+    3) Ra -> Y
+    4) Y  -> Rb
+
+1: Ra @Rb   | 
+    3) Rb -> MAR
+    4) Ra -> MD
+    5) MD -> M[MAR]
+
+2: @Ra Rb   |
+    3)
+
+3: @Ra @Rb  |
+    3)
+
+4: #N Rb    |
+    3) PC -> MAR; PC+1 -> PC    | PCout PCinc MARin
+    4) M[MA] -> MD              | MDen MEMsel 
+    5) MD -> Rb                 | RFin DSTsel MDen WRen
+
+5: #N, @Rb  |
+    3)
+
+6: N, Rb    |
+    3)
+
+7: Ra, N    |
+    3)
+
+```
+```
 0: Ra Rb:
 3) Ra -> Y              | RFout, Yin, Y=B
 4) Y  -> Rb             | RFin, DSTsel, Yout, END
@@ -44,4 +76,5 @@
 6) MD -> MAR
 7) Ra -> MD
 8) MD -> M[MAR]
+# 
 ```
