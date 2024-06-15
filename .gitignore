@@ -8,6 +8,7 @@ venv
 *.dtmp
 *.bkp
 /.vscode
+/__pycache__
 .vscode/launch.json
 .vscode/settings.json
 .directory
