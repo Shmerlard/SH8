@@ -1,25 +1,32 @@
-#### JMP
-```
-0x0E:  JMP  DST            | DST -> PC     
+# JMP
 
-```
-```
-0: Ra:
-XXXXXX
-1: Ra @Rb:
-XXXXXX
-2: @Ra:
-4) Ra -> PC
- 
+&&&&&& need to add addrssing modes for single operand
 
-3: @Ra @Rb
+```text
+0: Ra Rb    |
+    3) PC -> MAR        | PCout MARin
+    4) M[MAR] -> MDR    | MDRen MEMsel 
+    5) MDR -> PC        | MDRen WRsel PCin
+    6) END              | TCend
 
-4: #N Rb:
+1: Ra @Rb   | 
+    3)
 
-5: #N, @Rb:
+2: @Ra Rb   |
+    3)
 
-6: N, Rb:
+3: @Ra @Rb  |
+    3)
 
-7: Ra, N:
+4: #N Rb    |
+    3)
 
+5: #N, @Rb  |
+    3)
+
+6: N, Rb    |
+    3)
+
+7: Ra, N    |
+    3)
 ```

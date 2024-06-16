@@ -40,7 +40,7 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 0x0B:  CALL DST            | SP - 1 -> SP; PC -> @o match any number of path segments, including nono match any number of path segments, including nonSP; DST -> PC;   
 0x0C:  RET                 | @SP -> PC; SP + 1  -> SP;             
 0x0D:  CMP  Ra/#, Rb       | Rb - Ra/#                             
-0x0E:                               
+0x0E:        TST?????                       
 0x0F:                          
 0x10:                          
 --- Logical operations      ---
@@ -111,6 +111,7 @@ D = indicates the destination register
 5) implement another adressing mode for low memory
 6) add an option to correct mistakes in the excel
 7) solve the carry problem
+8) add addressing moded for single operand
 
 ## Full diagram
 

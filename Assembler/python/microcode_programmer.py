@@ -1,8 +1,6 @@
 from sh8lib import *
 import os, sys
 
-# pwd -> 
-
 microcode = pd.read_excel('../Microcode.xlsx')
 rowsNum, colNum = microcode.shape
 
