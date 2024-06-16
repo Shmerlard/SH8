@@ -9370,4 +9370,174 @@ a 6 13*0 1 a 6 1 a
     <wire from="(740,800)" to="(740,1050)"/>
     <wire from="(740,800)" to="(780,800)"/>
   </circuit>
+  <circuit name="ttl7400_instruction_register">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="ttl7400_instruction_register"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1020,290)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="REG_SEL_DST"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1020,320)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="REG_SEL_SRC"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1020,370)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ADDR_MODE"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(1020,410)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="OP_CODE"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(1040,160)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IR_L_O"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(1100,140)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="D_BUS_OUT"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(140,350)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="D_BUS"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(220,350)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(490,60)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(490,90)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="IR_OUT"/>
+    </comp>
+    <comp lib="0" loc="(520,60)" name="Tunnel">
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(520,90)" name="Tunnel">
+      <a name="label" val="IR_L_O"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(630,60)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="RST"/>
+    </comp>
+    <comp lib="0" loc="(660,60)" name="Tunnel">
+      <a name="label" val="RST"/>
+    </comp>
+    <comp lib="0" loc="(710,160)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="IR_WR_EN"/>
+    </comp>
+    <comp lib="0" loc="(780,180)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLK"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(780,210)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RST"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(820,240)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="bit1" val="0"/>
+      <a name="bit10" val="2"/>
+      <a name="bit11" val="3"/>
+      <a name="bit12" val="3"/>
+      <a name="bit13" val="3"/>
+      <a name="bit14" val="3"/>
+      <a name="bit15" val="3"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="2"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="16"/>
+      <a name="spacing" val="3"/>
+    </comp>
+    <comp lib="1" loc="(1060,140)" name="Controlled Buffer">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="4" loc="(790,110)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="label" val="IR"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="6" loc="(150,250)" name="7404">
+      <a name="ShowInternalStructure" val="true"/>
+    </comp>
+    <comp loc="(110,560)" name="ttl74173">
+      <a name="facing" val="north"/>
+      <a name="label" val="IR_3"/>
+    </comp>
+    <comp loc="(300,560)" name="ttl74173">
+      <a name="facing" val="north"/>
+      <a name="label" val="IR_2"/>
+    </comp>
+    <comp loc="(480,560)" name="ttl74173">
+      <a name="facing" val="north"/>
+      <a name="label" val="IR_1"/>
+    </comp>
+    <comp loc="(660,560)" name="ttl74173">
+      <a name="facing" val="north"/>
+      <a name="label" val="IR_0"/>
+    </comp>
+    <wire from="(1040,160)" to="(1050,160)"/>
+    <wire from="(1050,150)" to="(1050,160)"/>
+    <wire from="(1060,140)" to="(1100,140)"/>
+    <wire from="(490,60)" to="(520,60)"/>
+    <wire from="(490,90)" to="(520,90)"/>
+    <wire from="(630,60)" to="(660,60)"/>
+    <wire from="(710,160)" to="(790,160)"/>
+    <wire from="(720,260)" to="(720,410)"/>
+    <wire from="(720,410)" to="(1020,410)"/>
+    <wire from="(750,260)" to="(750,370)"/>
+    <wire from="(750,370)" to="(1020,370)"/>
+    <wire from="(780,180)" to="(790,180)"/>
+    <wire from="(780,210)" to="(820,210)"/>
+    <wire from="(780,260)" to="(780,320)"/>
+    <wire from="(780,320)" to="(1020,320)"/>
+    <wire from="(810,260)" to="(810,290)"/>
+    <wire from="(810,290)" to="(1020,290)"/>
+    <wire from="(820,200)" to="(820,210)"/>
+    <wire from="(820,240)" to="(890,240)"/>
+    <wire from="(850,140)" to="(890,140)"/>
+    <wire from="(890,140)" to="(1040,140)"/>
+    <wire from="(890,140)" to="(890,240)"/>
+  </circuit>
 </project>
