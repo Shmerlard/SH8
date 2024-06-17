@@ -1,9 +1,12 @@
 # The micro code
 
 ## The control lines
+
 the control lines are divided to 4 8-bit eeproms
+
 ### EEPROM 0
-```
+
+```text
 PROGRAM COUNTER:
     PCin
     PCout
@@ -16,10 +19,12 @@ REGISTER FILE:
 
 INSTRUCTION REGISTER:
     IRin
-    IRout
+    IRout           ## UNNECESSARY
 ```
+
 ### EEPROM 1
-```
+
+```text
 MEMORY REGISTERS:
     MARin
     MDRen
@@ -29,10 +34,12 @@ MEMORY REGISTERS:
 TIMING CONTROL:
     TCend
     GOTO6
-    HLT
+    HLT             ## UNNECESSARY
 ```
+
 ### EEPROM 2
-```
+
+```text
 ALU:
     Xin
     Yin
@@ -42,10 +49,12 @@ ALU:
     ALUctrl[2]
     ALUctrl[3]
 ```
+
 ### EEPROM 3
-```
+
+```text
 NOT YET IMPLEMENTED:
-    RST_EN
+    RST_EN          ## UNNECESSARY
     IN_REG
     OUT_REG
 
@@ -56,8 +65,10 @@ SHIFT CONTROL:
     SCld
     SCdec
 ```
+
 ## The input lines
-```
+
+```text
 CON (1bit)
 SHIFT CONTROL n=0 (1bit)    
 ADDRESSING MODE (3bits)

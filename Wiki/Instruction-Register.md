@@ -1,8 +1,10 @@
 # The instruction register
 
 ## Instruction format
+
 The instruction register is a 16-bit register
-```
+
+```text
 the format is XXXX-XAAA-SSSS-DDDD
 X = the opcode of the instruction
 A = indicates the addressing mode 
@@ -10,8 +12,9 @@ S = indicates the source register
 D = indicates the destination register
 ```
 
-## Addressing modes 
-```
+## Addressing modes
+
+```text
 000: Ra  Rb  | Reg - Reg Addressing            | Ra -> Rb
 001: Ra  @Rb | Reg - Indirect Addressing       | R[Ra] -> M[Rb]
 010: @Ra Rb  | Indirect - Reg Addressing       | M[Ra] -> Rb
@@ -21,17 +24,20 @@ D = indicates the destination register
 110: N   Rb  | Direct - Register Addressing    | M[N] -> Rb
 111: Ra  N   | Register - Direct Addressing    | Ra -> M[N]
 ```
+
 ### how fetching is obtained?
-```
+
+```text
 T0) PC    -> MAR; PC++  | PCout, MARin, PCinc
 T1) M[MA] -> MD         | MDRen, MEMsel, 
 T2) MD    -> IR         | MDRen, IRin WRsel
 ```
 
 ### RTN
-```
-(Rx)  Referce to the data inside register x
-(M[Rx]) Referce to the data at the with the address Rx
+
+```text
+(Rx)  Refers to the data inside register x
+(M[Rx]) Refers to the data at the with the address Rx
 
 (A ->  B) A is moving to B
 (A &   B) A bitwise AND B
@@ -43,8 +49,4 @@ T2) MD    -> IR         | MDRen, IRin WRsel
 (A RR  B) A is rotated right B times
 (A RL  B) A is rotated left B times
 
-```
-#### NOP 
-```
-4) END
 ```

@@ -24,10 +24,10 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 ## Instruction set
 
 ```text
-0x00:  NOP
+0x00:  NOP                                              ## UNNECESSARY
 0x01:  MOV  Ra/#, Rb       | Ra/# -> Rb
-0x02:  LD   Ra/#, Rb       | M[Ra/#] -> Rb
-0x03:  ST   Ra/#, Rb       | Rb -> M[Ra/#] ## might change the order of Ra Rb ##
+0x02:  LD   Ra/#, Rb       | M[Ra/#] -> Rb              ## UNNECESSARY: use MOV instead
+0x03:  ST   Ra/#, Rb       | Rb -> M[Ra/#]              ## UNNECESSARY
 0x04:  PUSH Ra/#           | SP - 1 -> SP; Ra/# -> @SP
 0x05:  POP  Ra             | @SP -> Ra; SP + 1 -> SP
 --- Arithmetic instructions ---
@@ -37,7 +37,7 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 0x09:  SHR  Ra/#, Rb       | SHR Rb (Ra/# times) -> Rb
 0x0A:  RRC  Ra/#, Rb       | RRC Rb (Ra/# times) -> Rb
 ---------------------- Subroutiness  ---
-0x0B:  CALL DST            | SP - 1 -> SP; PC -> @o match any number of path segments, including nono match any number of path segments, including nonSP; DST -> PC;   
+0x0B:  CALL DST            | SP - 1 -> SP; PC -> @SP; DST -> PC;   
 0x0C:  RET                 | @SP -> PC; SP + 1  -> SP;             
 0x0D:  CMP  Ra/#, Rb       | Rb - Ra/#                             
 0x0E:        TST?????                       
