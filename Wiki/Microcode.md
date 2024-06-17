@@ -19,7 +19,7 @@ REGISTER FILE:
 
 INSTRUCTION REGISTER:
     IRin
-    IRout           ## UNNECESSARY
+    Vout
 ```
 
 ### EEPROM 1
@@ -34,7 +34,10 @@ MEMORY REGISTERS:
 TIMING CONTROL:
     TCend
     GOTO6
-    HLT             ## UNNECESSARY
+
+SHIFT CONTROL:
+    SCld
+    SCdec
 ```
 
 ### EEPROM 2
@@ -48,22 +51,9 @@ ALU:
     ALUctrl[1]
     ALUctrl[2]
     ALUctrl[3]
-```
-
-### EEPROM 3
-
-```text
-NOT YET IMPLEMENTED:
-    RST_EN          ## UNNECESSARY
-    IN_REG
-    OUT_REG
 
 CONDITION CONTROL:
     CONin
-
-SHIFT CONTROL:
-    SCld
-    SCdec
 ```
 
 ## The input lines
