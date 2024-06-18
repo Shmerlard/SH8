@@ -24,44 +24,25 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 ## Instruction set
 
 ```text
-0x00:  NOP                                              ## UNNECESSARY
-0x01:  MOV  Ra/#, Rb       | Ra/# -> Rb
-0x02:  LD   Ra/#, Rb       | M[Ra/#] -> Rb              ## UNNECESSARY: use MOV instead
-0x03:  ST   Ra/#, Rb       | Rb -> M[Ra/#]              ## UNNECESSARY
-0x04:  PUSH Ra/#           | SP - 1 -> SP; Ra/# -> @SP
-0x05:  POP  Ra             | @SP -> Ra; SP + 1 -> SP
---- Arithmetic instructions ---
-0x06:  ADD  Ra/#, Rb       | Ra/# + Rb -> Rb
-0x07:  ADDC Ra/#, Rb       | Ra/# + Rb + c -> Rb
-0x08:  SUB  Ra/#, Rb       | Rb - Ra/#-> Rb
-0x09:  SHR  Ra/#, Rb       | SHR Rb (Ra/# times) -> Rb
-0x0A:  RRC  Ra/#, Rb       | RRC Rb (Ra/# times) -> Rb
----------------------- Subroutiness  ---
-0x0B:  CALL DST            | SP - 1 -> SP; PC -> @SP; DST -> PC;   
-0x0C:  RET                 | @SP -> PC; SP + 1  -> SP;             
-0x0D:  CMP  Ra/#, Rb       | Rb - Ra/#                             
-0x0E:        TST?????                       
-0x0F:                          
-0x10:                          
---- Logical operations      ---
-0x11:  AND  Ra/#, Rb       | Ra/# AND Rb -> Rb
-0x12:  OR   Ra/#, Rb       | Ra/# OR  Rb -> Rb                  
-0x13:  XOR  Ra/#, Rb       | Ra/# XOR Rb -> Rb
-0x14:  NOT  Ra Rb          | NOT Ra -> Rb
---- Input and output        ---
-0x15:  IOR  Ra             | IOR -> Ra
-0x16:  IOW  Ra/#           | Ra  -> IOR         
-0x17:         
-----------------------Conditional Jumps --------------------------
-0x18:  JMP  DST            | DST -> PC  
-0x19:  JEQ  DST            | (Z = 1 ):           DST -> PC 
-0x1A:  JNE  DST            | (Z != 0):           DST -> PC   
-0x1B:  JHS  DST            | (C = 0):            DST -> PC
-0x1C:  JH   DST            | (C = 0)AND(Z != 0): DST -> PC
-0x1D:  JLS  DST            | (C = 1)OR (Z = 0) : DST -> PC
-0x1E:  JL   DST            | (C = 1)AND(Z != 0): DST -> PC
-0x1F:                  
+0x0:  MOV  Ra/#, Rb       | Ra/# -> Rb
+0x1:  PUSH Ra/#           | SP - 1 -> SP; Ra/# -> @SP
+0x2:  POP  Ra             | @SP -> Ra; SP + 1 -> SP
+0x3:  ADD  Ra/#, Rb       | Ra/# + Rb -> Rb
+0x4:  ADDC Ra/#, Rb       | Ra/# + Rb + c -> Rb
+0x5:  SUB  Ra/#, Rb       | Rb - Ra/#-> Rb
+0x6:  SHR  Ra/#, Rb       | SHR Rb (Ra/# times) -> Rb
+0x7:  RRC  Ra/#, Rb       | RRC Rb (Ra/# times) -> Rb
+0x8:  CALL DST            | SP - 1 -> SP; PC -> @SP; DST -> PC;   
+0x9:  RET                 | @SP -> PC; SP + 1  -> SP;             
+0xA:  AND  Ra/#, Rb       | Ra/# AND Rb -> Rb
+0xB:  OR   Ra/#, Rb       | Ra/# OR  Rb -> Rb                  
+0xC:  XOR  Ra/#, Rb       | Ra/# XOR Rb -> Rb
+0xD:  IOR  Ra             | IOR -> Ra
+0xE:  IOW  Ra/#           | Ra  -> IOR         
+0xF:  JMP  DST            | DST -> PC  
 ```
+
+for more simulated instructions see: [Simulated Instructions](/Wiki/Simulated-Instructions.md)
 
 ## [Registers](/Wiki/Register-File.md)
 
@@ -72,8 +53,8 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 3: REG3     : GP
 4: REG3     : GP
 5: REG4     : GP
-6: REG5     : GP
-7: REG6     : GP
+6: REG5     : GP/Input REG ## NOT YET IMPLEMENTED
+7: REG6     : GP/Output REG ## NOT YET IMPLEMENTED
 ```
 
 ## [Memory](/Wiki/Memory-Registers.md)
@@ -93,7 +74,7 @@ the memory is mapped in the following way:
 The instruction register is a 16-bit register
 
 ```text
-the format is XXXX-XSSS-SAAA-DDDD
+the format is XXXX-SSSS-AAAF-DDDD
 X = the opcode of the instruction
 S = indicates the source register
 A = indicates the addressing mode

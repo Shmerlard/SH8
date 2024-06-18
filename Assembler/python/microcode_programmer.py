@@ -7,9 +7,8 @@ rowsNum, colNum = microcode.shape
 arr0 = [0] * (ADDRESS_COUNT)
 arr1 = [0] * (ADDRESS_COUNT)
 arr2 = [0] * (ADDRESS_COUNT)
-arr3 = [0] * (ADDRESS_COUNT)
 
-Arr = [arr0, arr1, arr2, arr3]
+Arr = [arr0, arr1, arr2]
 
 for rowIdx in range(rowsNum):
     row = microcode.iloc[rowIdx]
