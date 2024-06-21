@@ -8,52 +8,52 @@ the control lines are divided to 4 8-bit eeproms
 
 ```text
 PROGRAM COUNTER:
-    PCin
-    PCout
-    PCinc
+    PCin        | Reads the content of the bus to the PC
+    PCout       | Output the content of the PC to the BUS
+    PCinc       | increment the PC by 1
 
 REGISTER FILE:
-    RFin
-    RFout
-    DSTsel
+    RFin        | Reads the content of the bus to the selected register
+    RFout       | Output the content of the selcted register to bus
+    DSTsel      | if 1: select the dst reg, if 0: selects the src reg
 
 INSTRUCTION REGISTER:
-    IRin
-    Vout
+    IRin        | reads the content of the bus to the IR
+    Vout        | output the last 5 bit of the IR to the bus
 ```
 
 ### EEPROM 1
 
 ```text
 MEMORY REGISTERS:
-    MARin
-    MDRen
-    WRsel
-    MEMsel
+    MARin       | reads the content of the bus to the MAR
+    MDRen       | enables RD/WR to the MDR
+    WRsel       | if 1: enables write to the MDR, if 0: enables read
+    MEMsel      | if 1: selects the memory, if 0: selects the bus
 
 TIMING CONTROL:
-    TCend
-    GOTO6
+    TCend       | reset the time control to 0
+    GOTO6       | sets the time control to 6
 
 SHIFT CONTROL:
-    SCld
-    SCdec
+    SCld        | reads the content of the bus to the shift cotrol
+    SCdec       | decrement the shift control by 1
 ```
 
 ### EEPROM 2
 
 ```text
 ALU:
-    Xin
-    Yin
-    Yout
-    ALUctrl[0]
-    ALUctrl[1]
+    Xin         | reads the content of the bus to X-reg
+    Yin         | reads the output of the ALU to Y-reg
+    Yout        | output the Y-reg to the bus, also write the flags to SR
+    ALUctrl[0]  | select the alu controls
+    ALUctrl[1]  
     ALUctrl[2]
     ALUctrl[3]
 
 CONDITION CONTROL:
-    CONin
+    CONin       | input the bus to the condition logic
 ```
 
 ## The input lines
