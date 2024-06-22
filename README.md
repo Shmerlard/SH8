@@ -17,14 +17,14 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 
 ## Contents
 
-1) [Registers](/Wiki/Register-File.md)
-2) [Instruction Register](/Wiki/Instruction-Register.md)
-3) [Program Counter](/Wiki/Program-Counter.md)
-4) [ALU](/Wiki/ALU.md)
-5) [Control Unit](/Wiki/ControlUnit.md)
-6) [Memory Registers](/Wiki/Memory-Registers.md)
-7) [Condition Logic](/Wiki/Condition-Logic.md)
-8) [Shift Control](/Wiki/Shift-Control.md)
+1) [Registers](/Wiki/Modules/Register-File.md)
+2) [Instruction Register](/Wiki/Modules/Instruction-Register.md)
+3) [Program Counter](/Wiki/Modules/Program-Counter.md)
+4) [ALU](/Wiki/Modules/ALU.md)
+5) [Control Unit](/Wiki/Modules/ControlUnit.md)
+6) [Memory Registers](/Wiki/Modules/Memory-Registers.md)
+7) [Condition Logic](/Wiki/Modules/Condition-Logic.md)
+8) [Shift Control](/Wiki/Modules/Shift-Control.md)
 
 ## Instruction set
 
@@ -98,4 +98,4 @@ D = indicates the destination register
 
 ## Full diagram
 
-![text](Diagrams/Main-Diagram.jpg)
+![text](Wiki/Diagrams/Main-Diagram.jpg)
