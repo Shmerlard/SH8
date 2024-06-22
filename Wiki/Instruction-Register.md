@@ -5,7 +5,7 @@
 The instruction register is a 16-bit register
 
 ```text
-the format is XXXX-SSSS-AAAF-DDDD
+the format is XXXX-SSSS-FAAA-DDDD
 X = the opcode of the instruction
 S = indicates the source register
 A = indicates the addressing mode

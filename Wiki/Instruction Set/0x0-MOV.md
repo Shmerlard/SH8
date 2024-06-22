@@ -16,7 +16,7 @@
     5) MD -> Rb
 
 0x3: #N Rb:
-    3) PC -> MAR; PC++      | PCout, MARwr, PCinc
+    3) PC -> MAR; PC++      | PCout, MARin, PCinc
     4) M[MA] -> MD          | MEMsel, MDRin
     5) MD -> Rb             | MDRout, DSTsel, IRin,END
 

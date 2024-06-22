@@ -1,6 +1,9 @@
 # The shmerlard 16
 
-a 16 bit cpu based on the msp430 the jdh8 and the src cpu.
+hi, my name is elad and Im an electrical engineering studern in Ben gurion university.
+I designed a small 16bit cpu, with a mix of jdh8, src, msp430 and the Hack computer.
+this is still a work in progress, but so far it works.
+
 I used logisim for the logic design, draw.io for the diagrams.
 in order to see the working cpu in logisim: you need to build version `3.9.0` from source [here](https://github.com/logisim-evolution/logisim-evolution/blob/main/docs/developers.md), then just open the `.circ` file.
 
@@ -20,6 +23,8 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 4) [ALU](/Wiki/ALU.md)
 5) [Control Unit](/Wiki/ControlUnit.md)
 6) [Memory Registers](/Wiki/Memory-Registers.md)
+7) [Condition Logic](/Wiki/Condition-Logic.md)
+8) [Shift Control](/Wiki/Shift-Control.md)
 
 ## Instruction set
 
@@ -74,7 +79,7 @@ the memory is mapped in the following way:
 The instruction register is a 16-bit register
 
 ```text
-the format is XXXX-SSSS-AAAF-DDDD
+the format is XXXX-SSSS-FAAA-DDDD
 X = the opcode of the instruction
 S = indicates the source register
 A = indicates the addressing mode
@@ -87,12 +92,9 @@ D = indicates the destination register
 
 1) Whats the difference between my ram and logisim ram?
 2) Implement more jmp conditions
-3) Implement the HLT mechanic
-4) relative addressing in the assembler
-5) implement another adressing mode for low memory
-6) add an option to correct mistakes in the excel
-7) solve the carry problem
-8) add addressing moded for single operand
+3) relative addressing in the assembler
+4) add an option to correct mistakes in the excel
+5) solve the carry problem
 
 ## Full diagram
 
