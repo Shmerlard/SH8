@@ -1,6 +1,8 @@
 from sh8lib import *
 import os, sys
 
+current_file_directory = os.path.dirname(os.path.abspath(__file__))
+
 microcode = pd.read_excel('../Microcode.xlsx')
 rowsNum, colNum = microcode.shape
 
