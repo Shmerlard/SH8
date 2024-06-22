@@ -1,7 +1,8 @@
 # The ALU
 
 the alu has the folowing control lines:
-```
+
+```text
 0:  ADD
 1:  ADDC
 2:  SUB
@@ -16,8 +17,10 @@ the alu has the folowing control lines:
 0xB: INCX
 0xC: DECX
 ```
+
 according to the [datasheet](/Datasheets/74181.pdf) we are going to need the following:
-```
+
+```text
 0x0: ADD : F = A PLUS  B       : S = 0x9; M = 0; ALU_Carry_EN = 0
 0x1: ADDC: F = A PLUS  B PLUS C: S = 0x9; M = 0; ALU_CArry_EN = 1
 0x2: SUB : F = A MINUS B       : S = 0x6; M = 0; ALU_CARRY_EN = 0

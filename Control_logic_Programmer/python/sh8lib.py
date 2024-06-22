@@ -23,7 +23,7 @@ def get_code_array_from_line(line: str, lineNum: int = 0):
         #else: 
         #    raise Exception(f'the control line "{item}" not found in line number {lineNum}')
     
-    # returning an array with 4 elements with the code for each eeprom
+    # returning an array with 3 elements with the code for each eeprom
     output = []
     for ctrl in ctrlLines:
         tmp = 0
