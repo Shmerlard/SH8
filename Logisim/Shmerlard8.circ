@@ -11667,4 +11667,14 @@ a 6 13*0 1 a 6 0 10
     <wire from="(970,210)" to="(980,210)"/>
     <wire from="(980,110)" to="(980,210)"/>
   </circuit>
+  <circuit name="ttl7400_gp_register">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="ttl7400_gp_register"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp loc="(580,190)" name="ttl74173"/>
+    <comp loc="(580,360)" name="ttl74173"/>
+    <comp loc="(580,530)" name="ttl74173"/>
+    <comp loc="(580,700)" name="ttl74173"/>
+  </circuit>
 </project>

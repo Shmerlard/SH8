@@ -1,18 +1,23 @@
 # The ALU
 
+The ALU is the unit performing arithmetic and logical operations.
+the ALU also contains 2 registers, X and Y. X is for the input, Y is for the output.
+i used 4 74ls181 chips for the alu, but since the chip doesnt have a shifting mechanic another one is used.
+in
+
 the alu has the folowing control lines:
 
 ```text
-0:  ADD
-1:  ADDC
-2:  SUB
-3:  NOT
-4:  XOR
-5:  Y=B
-6:  AND
-7:  OR
-8:  SHR
-9:  SHRC
+0x0: ADD
+0x1: ADDC
+0x2: SUB
+0x3: NOT
+0x4: XOR
+0x5: Y=B
+0x6: AND
+0x7: OR
+0x8: SHR
+0x9: SHRC
 0xA: Y=X
 0xB: INCX
 0xC: DECX

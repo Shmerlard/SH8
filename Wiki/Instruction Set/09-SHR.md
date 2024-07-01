@@ -1,6 +1,8 @@
-# 
+# SHR
+
 **only 4lsb bits
-```
+
+```text
 0: Ra Rb    | (Rb>>Ra) -> Rb
     4) Ra -> n                      | RFout SCld
     5) Rb -> Y,X                    | RFout DSTsel Yin Xin Y=B

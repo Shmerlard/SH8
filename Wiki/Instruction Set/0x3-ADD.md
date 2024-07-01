@@ -1,30 +1,21 @@
-# 
+# ADD
 
-```
-0: Ra Rb    |
-    3) Ra -> X          | RFout Xin
-    4) X + Rb -> Y      | RFout DSTsel Yin ADD
-    5) Y -> Rb          | RFin DSTsel Yout
+```text
+0x0: Ra Rb: Ra + Rb -> Rb
+    3) Ra -> X
+    4) X + Rb -> Y
+    5) Y -> Rb
 
-1: Ra @Rb   | 
-    3)
+0x1: @Ra Rb: M[Ra] + Rb -> Rb
+    3) Ra -> MAR
+    4) Rb -> X; M[MAR] -> MDR
+    5) X + MDR -> Y
+    6) Y -> Rb
 
-2: @Ra Rb   |
-    3)
-
-3: @Ra @Rb  |
-    3)
-
-4: #N Rb    |
-    3)
-
-5: #N, @Rb  |
-    3)
-
-6: N, Rb    |
-    3)
-
-7: Ra, N    |
-    3)
+0x2: #N Rb: #N + Rb -> Rb
+    3) PC -> MAR; PC++
+    4) Rb -> X  ; M[MAR] -> MDR
+    5) MDR + X -> Y
+    6) Y -> Rb
 
 ```

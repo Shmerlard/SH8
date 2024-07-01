@@ -62,6 +62,6 @@ CONDITION CONTROL:
 CON (1bit)
 SHIFT CONTROL n=0 (1bit)    
 ADDRESSING MODE (3bits)
-OPCODE (5bits)
+OPCODE (4bits)
 TIME CONTROL (4bits)
 ```
