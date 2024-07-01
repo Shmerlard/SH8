@@ -25,6 +25,7 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 6) [Memory Registers](/Wiki/Modules/Memory-Registers.md)
 7) [Condition Logic](/Wiki/Modules/Condition-Logic.md)
 8) [Shift Control](/Wiki/Modules/Shift-Control.md)
+9) [Gallery](/Wiki/Gallery.md)
 
 ## Instruction set
 
