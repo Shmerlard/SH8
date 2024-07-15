@@ -1930,14 +1930,6 @@ f024 4
       <a name="appearance" val="logisim_evolution"/>
       <a name="trigger" val="high"/>
     </comp>
-    <comp lib="8" loc="(570,330)" name="Text">
-      <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="CON1:Equal"/>
-    </comp>
-    <comp lib="8" loc="(575,315)" name="Text">
-      <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="CON0: Always"/>
-    </comp>
     <wire from="(1000,350)" to="(1000,440)"/>
     <wire from="(1000,620)" to="(1000,650)"/>
     <wire from="(1000,620)" to="(1040,620)"/>
@@ -4471,7 +4463,7 @@ a 6 13*0 1 a 6 0 10
       <a name="max" val="0xf"/>
       <a name="width" val="4"/>
     </comp>
-    <wire from="(230,240)" to="(280,240)"/>
+    <wire from="(230,240)" to="(390,240)"/>
     <wire from="(230,260)" to="(230,270)"/>
     <wire from="(230,260)" to="(270,260)"/>
     <wire from="(230,420)" to="(290,420)"/>
@@ -4479,16 +4471,11 @@ a 6 13*0 1 a 6 0 10
     <wire from="(240,300)" to="(270,300)"/>
     <wire from="(240,390)" to="(410,390)"/>
     <wire from="(270,500)" to="(410,500)"/>
-    <wire from="(280,220)" to="(280,240)"/>
-    <wire from="(280,220)" to="(310,220)"/>
-    <wire from="(280,240)" to="(390,240)"/>
     <wire from="(320,270)" to="(320,280)"/>
     <wire from="(320,270)" to="(550,270)"/>
     <wire from="(320,420)" to="(350,420)"/>
-    <wire from="(340,210)" to="(390,210)"/>
     <wire from="(350,320)" to="(350,420)"/>
     <wire from="(350,320)" to="(550,320)"/>
-    <wire from="(390,210)" to="(390,240)"/>
     <wire from="(390,240)" to="(390,260)"/>
     <wire from="(390,260)" to="(550,260)"/>
     <wire from="(390,290)" to="(390,300)"/>
