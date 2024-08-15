@@ -32,8 +32,8 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 ```text
 0x0:  MOV  Ra/#, Rb       | Ra/# -> Rb
 0x1:  PUSH Ra/#           | Ra/# -> @SP; SP--
-0x3:  ADD  Ra/#, Rb       | Ra/# + Rb -> Rb
 0x2:  POP  Ra             | SP++; @SP -> Ra
+0x3:  ADD  Ra/#, Rb       | Ra/# + Rb -> Rb
 0x4:  ADDC Ra/#, Rb       | Ra/# + Rb + c -> Rb
 0x5:  SUB  Ra/#, Rb       | Rb - Ra/#-> Rb
 0x6:  SHR  Ra/#, Rb       | SHR Rb (Ra/# times) -> Rb
@@ -50,7 +50,7 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 
 for more simulated instructions see: [Simulated Instructions](/Wiki/Simulated-Instructions.md)
 
-## [Registers](/Wiki/Register-File.md)
+## [Registers](/Wiki/Modules/Register-File.md)
 
 ```text
 0: SP/REG0  : STACK pointer    
@@ -63,7 +63,7 @@ for more simulated instructions see: [Simulated Instructions](/Wiki/Simulated-In
 7: REG6     : GP/Output REG ## NOT YET IMPLEMENTED
 ```
 
-## [Memory](/Wiki/Memory-Registers.md)
+## [Memory](/Wiki/Modules/Memory-Registers.md)
 
 the memory ranges from `0x0000` to `0xFFFF`.
 the memory is mapped in the following way:
@@ -75,7 +75,7 @@ the memory is mapped in the following way:
 0xD000 - 0xFFFF: NOT IN USE          (12KiB UNUSED)
 ```
 
-## [Instruction format](/Wiki/Instruction-Register.md)
+## [Instruction format](/Wiki/Modules/Instruction-Register.md)
 
 The instruction register is a 16-bit register
 
@@ -87,7 +87,7 @@ A = indicates the addressing mode
 D = indicates the destination register
 ```
 
-(see [addressing modes](/Wiki/Instruction-Register.md#addressing-modes)) for more info
+(see [addressing modes](/Wiki/Modules/Instruction-Register.md#addressing-modes)) for more info
 
 ## TODOS
 
