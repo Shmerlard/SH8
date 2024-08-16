@@ -13,4 +13,3 @@ the register file contains the following registers:
 
 2-7 : REG A-F   | 6 GP 16 bit registers
 ```
-

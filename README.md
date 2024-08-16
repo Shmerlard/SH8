@@ -38,14 +38,14 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 0x5:  SUB  Ra/#, Rb       | Rb - Ra/#-> Rb
 0x6:  SHR  Ra/#, Rb       | SHR Rb (Ra/# times) -> Rb
 0x7:  RRC  Ra/#, Rb       | RRC Rb (Ra/# times) -> Rb
-0x8:  CALL DST            | PC -> @SP; DST -> PC; SP-- -> SP;  ##might be a special case of push 
-0x9:  RET                 | SP + 1  -> SP; @SP -> PC;          ## might be a special case of pop   
+0x8:  CALL DST            | PC -> @SP; DST -> PC; SP-- -> SP;
+0x9:  RET                 | SP + 1  -> SP; @SP -> PC;
 0xA:  AND  Ra/#, Rb       | Ra/# AND Rb -> Rb
-0xB:  OR   Ra/#, Rb       | Ra/# OR  Rb -> Rb                  
+0xB:  OR   Ra/#, Rb       | Ra/# OR  Rb -> Rb
 0xC:  XOR  Ra/#, Rb       | Ra/# XOR Rb -> Rb
-0xD:  IOR  Ra             | IOR -> Ra
-0xE:  IOW  Ra/#           | Ra  -> IOR         
-0xF:  JMP  DST            | DST -> PC  
+0xD:  
+0xE:
+0xF:  JMP  DST            | DST -> PC
 ```
 
 for more simulated instructions see: [Simulated Instructions](/Wiki/Simulated-Instructions.md)

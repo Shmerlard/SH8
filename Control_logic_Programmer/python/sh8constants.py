@@ -45,14 +45,14 @@ aluCtrlLines = [
     "SUB",
     "NOT",
     "XOR",
-    "Y=B",
+    "Y=A",
     "AND",
     "OR",
     "SHR",
     "SHRC",
     "Y=X",
-    "INCX",
-    "DECX"
+    "INCA",
+    "DECA"
 ]
 
 instructionSet = [

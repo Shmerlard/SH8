@@ -1,7 +1,7 @@
 # SHR
 
 ```text
-0x0: Ra Rb: Rb (Shifted R[Ra] times) -> Rb
+0x0: Ra Rb: Rb (Shifted R[Ra]<3...0> times) -> Rb
     3) Ra -> n                          | RFout SCld
     4) Rb -> Y                          | RFout DSTsel Y=B Yin
     5) (n != 0): Y SHR -> Y; n--        | SHR Yout Yin SCdec
@@ -30,16 +30,3 @@
 0x7: SPECIAL
 ```
 
-```text
-0x1: Ra:
-    3)
-
-0x2: @Ra:
-    3)
-
-0x3: #N:
-    3)
-
-0x4: N:
-    3)
-```

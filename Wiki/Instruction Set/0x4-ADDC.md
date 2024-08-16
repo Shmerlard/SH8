@@ -1,5 +1,7 @@
 # ADDC
 
+`ADDC` is a type 2 instruction that adds two numbers with carry
+
 ```text
 0x0: Ra Rb: Ra + Rb + c -> Rb
     3) Ra -> X                  | Xin RFout

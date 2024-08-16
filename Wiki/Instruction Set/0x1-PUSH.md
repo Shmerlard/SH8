@@ -1,6 +1,6 @@
 # PUSH
 
-in this command the SP (reg#0) is selected to be dst reg
+although `PUSH` uses only one register it is a type 2 instruction since the SP(reg#0) is set to be the dst reg by the compiler
 
 ```text
 0x0: Ra: Ra -> @SP; SP--

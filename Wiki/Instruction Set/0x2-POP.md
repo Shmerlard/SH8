@@ -17,4 +17,8 @@ in this command the SP (reg#0) is selected to be src reg
 
 0x3: N:
     3)
+
+0x7: RET: SP++; @SP -> PC
+    3) 
+    
 ```

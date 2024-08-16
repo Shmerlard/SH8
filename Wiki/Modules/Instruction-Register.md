@@ -1,8 +1,21 @@
 # The instruction register
 
+The instruction register is a 16-bit register
+
 ## Instruction format
 
-The instruction register is a 16-bit register
+there are 2 types of instruction formats one is for 1 operand and the other is for 2 operands
+
+### Type 1 format
+
+```text
+the format is XXXX-SSSS-FFFF-FFFF
+X = the opcode of the instruction
+S = indicates the source register
+F = UNUSED
+```
+
+### Type 2 format
 
 ```text
 the format is XXXX-SSSS-FAAA-DDDD
@@ -10,6 +23,7 @@ X = the opcode of the instruction
 S = indicates the source register
 A = indicates the addressing mode
 D = indicates the destination register
+F = UNUSED
 ```
 
 ## Addressing modes
