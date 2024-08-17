@@ -7,7 +7,7 @@ The control unit is a module consists of 3 eeproms controling the 24 control lin
 
 ### The control lines
 
-the control lines are divided to 4 8-bit eeproms
+the control lines are divided to 3 8-bit eeproms.
 
 #### EEPROM 0
 
@@ -24,7 +24,7 @@ REGISTER FILE:
 
 INSTRUCTION REGISTER:
     IRin        | reads the content of the bus to the IR
-    Vout        | output the last 5 bit of the IR to the bus
+    Vout        | output the last 4 bit of the IR to the bus
 ```
 
 #### EEPROM 1

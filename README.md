@@ -21,7 +21,7 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 2) [Instruction Register](/Wiki/Modules/Instruction-Register.md)
 3) [Program Counter](/Wiki/Modules/Program-Counter.md)
 4) [ALU](/Wiki/Modules/ALU.md)
-5) [Control Unit](/Wiki/Modules/ControlUnit.md)
+5) [Control Unit](/Wiki/Modules/Control-Unit.md)
 6) [Memory Registers](/Wiki/Modules/Memory-Registers.md)
 7) [Condition Logic](/Wiki/Modules/Condition-Logic.md)
 8) [Shift Control](/Wiki/Modules/Shift-Control.md)
@@ -39,7 +39,7 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 0x6:  SHR  Ra/#, Rb       | SHR Rb (Ra/# times) -> Rb
 0x7:  RRC  Ra/#, Rb       | RRC Rb (Ra/# times) -> Rb
 0x8:  CALL DST            | PC -> @SP; DST -> PC; SP-- -> SP;
-0x9:  RET                 | SP + 1  -> SP; @SP -> PC;
+0x9:  RET                 | SP++ -> SP; @SP -> PC;              # Will be a special case of POP
 0xA:  AND  Ra/#, Rb       | Ra/# AND Rb -> Rb
 0xB:  OR   Ra/#, Rb       | Ra/# OR  Rb -> Rb
 0xC:  XOR  Ra/#, Rb       | Ra/# XOR Rb -> Rb

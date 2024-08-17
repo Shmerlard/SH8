@@ -2,12 +2,12 @@
 
 ```text
 0x0: Ra Rb: Rb (Shifted R[Ra]<3...0> times) -> Rb
-    3) Ra -> n                          | RFout SCld
-    4) Rb -> Y                          | RFout DSTsel Y=B Yin
-    5) (n != 0): Y SHR -> Y; n--        | SHR Yout Yin SCdec
-       (n  = 0): Y -> Rb                | Yout RFin DSTsel
-    6) GOTO5                            | GOTO5      #### NOTFINISHED
-
+    3) Ra -> n                      | RFout SCld
+    4) Rb -> Y                      | RFout DSTsel Y=A Yin
+    5) NOP                          | 
+    6) (n != 0): Y SHR -> Y; n--    | SHR Yout Yin SCdec GOTO6
+       (n  = 0): Y -> Rb            | Yout RFin DSTsel
+    7) TCEND                        | TCend
 
 0x1: Ra @Rb:
     3) 
@@ -15,8 +15,13 @@
 0x2: @Ra Rb:
     3) 
 
-0x3: #N Rb:
-    3) 
+0x3: #N Rb: Rb (Shifted #N times) -> Rb
+    3) PC -> MAR; PC++              | PCout MARin PCinc
+    4) M[MAR] -> MD; Rb -> Y        | RFout DSTsel Y=A Yin MDRen WRsel MEMsel
+    5) MD -> n                      | MDRen SCld
+    6) (n != 0): Y SHR -> Y; n--    | Yout Yin SHR SCdec GOTO6
+       (n  = 0): Y -> Rb            | RFin DSTsel Yout
+    7) TCend                        | TCend
 
 0x4: #N, @Rb:
     3) 

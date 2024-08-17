@@ -2,6 +2,13 @@
 
 the condition logic control wheter the condition is satisfied or not:
 the condition is a 3bit value.
+the condition value is stored in the IR and the assembler will check which jump instruction is written and then insert the matching command.
+for instance `JMP @R5` will be translated as `F517`, 
+`F` is for `JMP` instruction, 
+`5` is for `R5`, 
+`1` is for `@Ra` addressing mode, 
+and `7` is for always jump.
+the instruction `JEQ @R5` will be translated to `F512`, everything will be the same exept that now we want to jump if equal.
 
 ```text
 the condition format is XYZ
