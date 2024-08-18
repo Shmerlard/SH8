@@ -33,7 +33,7 @@ INSTRUCTION REGISTER:
 MEMORY REGISTERS:
     MARin       | reads the content of the bus to the MAR
     MDRen       | enables RD/WR to the MDR
-    WRsel       | if 1: enables write to the MDR, if 0: enables read
+    WRsel       | if 1: MDR is outputing data, if 0: MDR is inputing data
     MEMsel      | if 1: selects the memory, if 0: selects the bus
 
 TIMING CONTROL:

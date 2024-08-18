@@ -42,9 +42,9 @@ F = UNUSED
 ### how fetching is obtained?
 
 ```text
-T0) PC    -> MAR; PC++  | PCout, MARin, PCinc
-T1) M[MA] -> MD         | MDRen, MEMsel, 
-T2) MD    -> IR         | MDRen, IRin WRsel
+T0) PC     -> MAR; PC++  | PCout, MARin, PCinc
+T1) M[MAR] -> MDR        | MDRen, MEMsel, 
+T2) MDR    -> IR         | MDRen, IRin WRsel
 ```
 
 ### RTN

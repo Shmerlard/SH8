@@ -11,5 +11,7 @@ the register file contains the following registers:
                   2: (N) Negative flag
                   3: (E) Even flag
 
-2-7 : REG A-F   | 6 GP 16 bit registers
+2-3 : INPUT OUTPUT REGISTERS
+
+4-15: GP Registers
 ```

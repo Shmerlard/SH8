@@ -43,7 +43,7 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 0xA:  AND  Ra/#, Rb       | Ra/# AND Rb -> Rb
 0xB:  OR   Ra/#, Rb       | Ra/# OR  Rb -> Rb
 0xC:  XOR  Ra/#, Rb       | Ra/# XOR Rb -> Rb
-0xD:  
+0xD:
 0xE:
 0xF:  JMP  DST            | DST -> PC
 ```

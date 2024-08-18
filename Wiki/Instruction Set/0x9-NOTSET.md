@@ -1,6 +1,5 @@
 # RET
 
-&&& note: i should change source of INC from X to bus
 
 in this command `SP` is set to be the `SRC` register
 ```text

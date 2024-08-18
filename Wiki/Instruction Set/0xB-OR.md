@@ -1,9 +1,9 @@
-# XOR
+# OR
 
 ```text
-0x0: Ra Rb: Ra XOR Rb -> Rb
+0x0: Ra Rb: Ra OR Rb -> Rb
     3) Ra -> X                  | RFout Xin
-    4) X XOR Rb -> Y            | RFout DSTsel XOR Yin  
+    4) X OR Rb -> Y             | RFout DSTsel OR Yin  
     5) Y -> Rb                  | RFin DSTsel Yout
     6) END                      | TCend
 
@@ -13,10 +13,10 @@
 0x2: @Ra Rb:
     3)
 
-0x3: #N Rb: #N XOR Rb -> Rb
+0x3: #N Rb: #N OR Rb -> Rb
     3) PC -> MAR; PC++          | PCout PCinc MARin
     4) Rb -> X; M[MAR] -> MDR   | RFout DSTsel Xin MDRen MEMsel
-    5) X XOR MDR -> Y           | Yin XOR MDRen WRsel
+    5) X OR MDR -> Y            | Yin OR MDRen WRsel
     6) Y -> Rb                  | RFin DSTsel Yout
     7) END                      | TCend
 
