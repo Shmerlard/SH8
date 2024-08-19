@@ -57,20 +57,20 @@ aluCtrlLines = [
 
 instructionSet = [
     "MOV",
+    "ST",
     "PUSH",
     "POP",
     "ADD",
     "ADDC",
     "SUB",
+    "CMP",
     "SHR",
     "RRC",
-    "CALL",
-    "RET",
     "AND",
     "OR",
     "XOR",
     "IOR",
-    "IOW",
+    "CALL",
     "JMP",
 ]
 

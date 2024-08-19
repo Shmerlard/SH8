@@ -4,40 +4,52 @@ The instruction register is a 16-bit register
 
 ## Instruction format
 
-there are 2 types of instruction formats one is for 1 operand and the other is for 2 operands
-
-### Type 1 format
-
+there is only one type of instruction formats
 ```text
-the format is XXXX-SSSS-FFFF-FFFF
+the format is XXXX-SSSS-FFAA-DDDD
 X = the opcode of the instruction
 S = indicates the source register
-F = UNUSED
-```
-
-### Type 2 format
-
-```text
-the format is XXXX-SSSS-FAAA-DDDD
-X = the opcode of the instruction
-S = indicates the source register
+F = Currently not in use
 A = indicates the addressing mode
 D = indicates the destination register
-F = UNUSED
 ```
 
 ## Addressing modes
 
+each addressing mode is represented by 2 bits for a total of 4 adressing modes for each type
+there are 3 types of addressing modes
+
+### Type 1 addressing mods
+this type is used by `MOV`,`AND`,`OR`,`XOR`,`SHR`,`RRC`, `ADD`,`ADDC` and SUB.
+
 ```text
-000: Ra  Rb  | Reg - Reg Addressing            | Ra -> Rb
-001: Ra  @Rb | Reg - Indirect Addressing       | R[Ra] -> M[Rb]
-010: @Ra Rb  | Indirect - Reg Addressing       | M[Ra] -> Rb
-011: #N  Rb  | Immediate - Register Addressing | N -> Rb
-100: #N  @Rb | Immediate - Indirect Addressing | N -> M[Rb]
-101: N   Rb  | Direct - Register Addressing    | M[N] -> Rb 
-110: Ra  N   | Register - Direct Addressing    | Ra -> M[N]
-111: SPECIAL | depneds on the opcode
+0x0: Ra  Rb             | MOV Ra  Rb: Ra    -> Rb
+0x1: @Ra Rb             | MOV @Ra Rb: M[Ra] -> Rb
+0x2: #N  Rb             | MOV #N  Rb: #N    -> Rb
+0x3: N   Rb             | MOV N   Rb: M[N]  -> Rb
 ```
+
+### Type 2 addressing mods
+this type is used by `ST`
+
+```text
+0x0: #N  #K             | ST #N #K: #N -> M[#K]
+0x1: Ra  @Rb            | ST Ra @Rb: Ra -> M[Rb]
+0x2: Ra  #N             | ST Ra #N: Ra -> M[#N]
+0x3: Ra  N              | ST Ra N: Ra -> M[M[#N]]
+```
+
+### Type 3 addressing mods
+this type is used by `PUSH`,`POP`,`CALL` and `JMP`
+
+```text
+0x0: Ra                 | POP Ra: @SP -> Ra
+0x1: @Ra                | POP @Ra: @SP -> @Ra
+0x2: #N                 | POP #N: @SP -> M[#N]
+0x3: N                  | PUSH N: M[M[#N]] -> @SP
+```
+^note 1: in the examples above there are also `SP++` steps which I didnt include here.
+^note 2: the `POP N` is implemented in the CPU as `RET`.
 
 ### how fetching is obtained?
 

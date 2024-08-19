@@ -24,5 +24,5 @@ the `SP` is set to be the source register and `Ra` is set to be the destination 
    10) END                      | TCend
 
 0x3: N:
-    3)a
+    3)
 ```

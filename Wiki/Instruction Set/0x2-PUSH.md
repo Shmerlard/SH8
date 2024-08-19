@@ -1,7 +1,9 @@
 # PUSH
 
-although `PUSH` uses only one register it is a type 2 instruction since the SP(reg#0) is set to be the dst reg by the compiler
+the SP(reg#0) is set to be the dst reg by the compiler
+`PUSH` has a type 3 addressing mode
 
+## The microcode
 ```text
 0x0: Ra: Ra -> @SP; SP--
     3) SP -> MAR; SP-- -> Y     | RFout DSTsel DECA Yin MARin

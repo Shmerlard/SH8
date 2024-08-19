@@ -7,31 +7,20 @@
     5) NOP                          | 
     6) (n != 0): Y SHR -> Y; n--    | SHR Yout Yin SCdec GOTO6
        (n  = 0): Y -> Rb            | Yout RFin DSTsel
-    7) TCEND                        | TCend
+    7) END                          | TCend
 
-0x1: Ra @Rb:
+0x1: @Ra Rb:
     3) 
 
-0x2: @Ra Rb:
-    3) 
-
-0x3: #N Rb: Rb (Shifted #N times) -> Rb
+0x2: #N Rb: Rb (Shifted #N times) -> Rb
     3) PC -> MAR; PC++              | PCout MARin PCinc
-    4) M[MAR] -> MD; Rb -> Y        | RFout DSTsel Y=A Yin MDRen WRsel MEMsel
-    5) MD -> n                      | MDRen SCld
+    4) M[MAR] -> MD; Rb -> Y        | RFout DSTsel Y=A Yin MDRen MEMsel
+    5) MD -> n                      | MDRen WRsel SCld
     6) (n != 0): Y SHR -> Y; n--    | Yout Yin SHR SCdec GOTO6
        (n  = 0): Y -> Rb            | RFin DSTsel Yout
-    7) TCend                        | TCend
+    7) END                          | TCend
 
-0x4: #N, @Rb:
+0x3: N, @Rb:
     3) 
-
-0x5: N, Rb:
-    3) 
-
-0x6: Ra, N:
-    3) 
-
-0x7: SPECIAL
 ```
 

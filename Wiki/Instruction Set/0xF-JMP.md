@@ -11,7 +11,7 @@ the register A is set to be the source register by the assembler
        (CON = 0): NOP               | NOP
     5) END                          | TCend
 
-0x1: @Ra: if(CON): M[Ra] -> PC ##MIGHT BE USELESS
+0x1: @Ra: if(CON): M[Ra] -> PC
     3) 
 
 0x2: #N: if(CON): #N -> PC

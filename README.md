@@ -30,21 +30,21 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 ## Instruction set
 
 ```text
-0x0:  MOV  Ra/#, Rb       | Ra/# -> Rb
-0x1:  PUSH Ra/#           | Ra/# -> @SP; SP--
-0x2:  POP  Ra             | SP++; @SP -> Ra
-0x3:  ADD  Ra/#, Rb       | Ra/# + Rb -> Rb
-0x4:  ADDC Ra/#, Rb       | Ra/# + Rb + c -> Rb
-0x5:  SUB  Ra/#, Rb       | Rb - Ra/#-> Rb
-0x6:  SHR  Ra/#, Rb       | SHR Rb (Ra/# times) -> Rb
-0x7:  RRC  Ra/#, Rb       | RRC Rb (Ra/# times) -> Rb
-0x8:  CALL DST            | PC -> @SP; DST -> PC; SP-- -> SP;
-0x9:  RET                 | SP++ -> SP; @SP -> PC;              # Will be a special case of POP
+0x0:  MOV  Ra/#, Rb       |
+0x1:  ST   Ra/#, Rb       |
+0x2:  PUSH Ra/#           | Ra/# -> @SP; SP--
+0x3:  POP  Ra             | SP++; @SP -> Ra
+0x4:  ADD  Ra/#, Rb       | Ra/# + Rb -> Rb
+0x5:  ADDC Ra/#, Rb       | Ra/# + Rb + c -> Rb
+0x6:  SUB  Ra/#, Rb       | Rb - Ra/# -> Rb
+0x7:  CMP  Ra/#, Rb       | Rb - Ra/#
+0x8:  SHR  Ra/#, Rb       | SHR Rb (Ra/# times) -> Rb
+0x9   RRC  Ra/#, Rb       | RRC Rb (Ra/# times) -> Rb
 0xA:  AND  Ra/#, Rb       | Ra/# AND Rb -> Rb
 0xB:  OR   Ra/#, Rb       | Ra/# OR  Rb -> Rb
 0xC:  XOR  Ra/#, Rb       | Ra/# XOR Rb -> Rb
 0xD:
-0xE:
+0xE:  CALL DST            | PC -> @SP; DST -> PC; SP-- -> SP;
 0xF:  JMP  DST            | DST -> PC
 ```
 
@@ -80,9 +80,10 @@ the memory is mapped in the following way:
 The instruction register is a 16-bit register
 
 ```text
-the format is XXXX-SSSS-FAAA-DDDD
+the format is XXXX-SSSS-FFAA-DDDD
 X = the opcode of the instruction
 S = indicates the source register
+F = Currently not in use
 A = indicates the addressing mode
 D = indicates the destination register
 ```

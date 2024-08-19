@@ -21,4 +21,7 @@
     6) Y -> Rb                  | Yout RFin DSTsel
     7) END                      | TCend
 
+0x3: N Rb: M[#N] + Rb -> Rb
+    3) END                      | TCend
+
 ```
