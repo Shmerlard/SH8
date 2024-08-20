@@ -43,16 +43,18 @@ aluCtrlLines = [
     "ADD",
     "ADDC",
     "SUB",
-    "NOT",
-    "XOR",
-    "Y=A",
     "AND",
     "OR",
-    "SHR",
-    "SHRC",
+    "XOR",
+    "NOT",
+    "Y=A",
     "Y=X",
-    "INCA",
-    "DECA"
+    "SHR",
+    "RRC",
+    "SHL",
+    "RLC",
+    "DECA",
+    "INCA"
 ]
 
 instructionSet = [
@@ -74,12 +76,13 @@ instructionSet = [
     "JMP",
 ]
 
-ADDR_MODE_COUNT = 8
+ADDR_MODE_COUNT = 4
 OPCODE_COUNT = 16
 TC_T_COUNT = 16
 
 CON_SHIFT_AMOUNT = 12
 SC_SHIFT_AMOUNT = 11
+ALT_SHIFT_AMOUNT = 10
 ADDR_MODE_SHIFT_AMOUNT = 8
 OPCODE_SHIFT_AMOUNT = 4
 
