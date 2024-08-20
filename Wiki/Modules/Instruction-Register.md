@@ -6,11 +6,12 @@ The instruction register is a 16-bit register
 
 there is only one type of instruction formats
 ```text
-the format is XXXX-SSSS-FFAA-DDDD
+the format is XXXX-AUMM-SSSS-DDDD
 X = the opcode of the instruction
+A = indicates if instrucion is alternate
+U = Currently not in use
+M = indicates the addressing mode
 S = indicates the source register
-F = Currently not in use
-A = indicates the addressing mode
 D = indicates the destination register
 ```
 
@@ -58,6 +59,9 @@ T0) PC     -> MAR; PC++  | PCout, MARin, PCinc
 T1) M[MAR] -> MDR        | MDRen, MEMsel, 
 T2) MDR    -> IR         | MDRen, IRin WRsel
 ```
+
+## Altenate mode
+WIP
 
 ### RTN
 
