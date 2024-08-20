@@ -33,9 +33,9 @@ this type is used by `MOV`,`AND`,`OR`,`XOR`,`SHR`,`RRC`, `ADD`,`ADDC` and SUB.
 this type is used by `ST`
 
 ```text
-0x0: #N  #K             | ST #N #K: #N -> M[#K]
-0x1: Ra  @Rb            | ST Ra @Rb: Ra -> M[Rb]
-0x2: Ra  #N             | ST Ra #N: Ra -> M[#N]
+0x0: Ra  @Rb            | ST Ra @Rb: Ra -> M[Rb]
+0x1: Ra  #N             | ST Ra #N: Ra -> M[#N]
+0x2: #N  @Rb            | ST #N #K: #N -> M[#K]
 0x3: Ra  N              | ST Ra N: Ra -> M[M[#N]]
 ```
 

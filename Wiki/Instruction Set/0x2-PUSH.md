@@ -11,8 +11,12 @@ the SP(reg#0) is set to be the dst reg by the compiler
     5) MDR -> M[MAR]; Y -> SP   | RFin DSTsel Yout MDRen MEMsel WRsel
     6) END                      | TCend
 
-0x1: @Ra:
-    3)
+0x1: @Ra: M[Ra] -> @SP; SP--
+    3) Ra -> MAR                | RFout MARin
+    4) M[MAR] -> MDR            | MDRen MEMsel
+    5) SP -> MAR; SP-- -> Y     | RFout DSTsel Yin DECA MARin
+    6) MDR -> M[MAR]            | MDRen WRsel MEMsel
+    7) END                      | TCend
 
 0x2: #N: #N -> @SP; SP--
     3) PC -> MAR; PC++          | PCout PCinc MARin
@@ -21,6 +25,12 @@ the SP(reg#0) is set to be the dst reg by the compiler
     6) MDR -> M[MAR]; Y -> SP   | RFin DSTsel Yout MDRen MEMsel WRsel
     7) END                      | TCend
 
-0x3: N:
-    3)
+0x3: N: M[#N] -> @SP; SP--
+    3) PC -> MAR; PC++          | PCout PCinc MARin
+    4) M[MAR] -> MDR            | MDRen MEMsel
+    5) MDR -> MAR               | MARin MDRen WRsel
+    6) M[MAR] -> MDR            | MDRen MEMsel
+    7) SP -> MAR; SP-- -> Y     | RFout DSTsel MARin DECA Yin
+    8) MDR -> M[MAR]; Y -> SP   | RFin DSTsel You MDRen MEMsel WRsel
+    9) END                      | TCend
 ```

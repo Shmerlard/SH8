@@ -30,8 +30,8 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 ## Instruction set
 
 ```text
-0x0:  MOV  Ra/#, Rb       |
-0x1:  ST   Ra/#, Rb       |
+0x0:  MOV  Ra/#, Rb       | Ra/# -> Rb
+0x1:  ST   Ra/#, Rb/#     | Ra/# -> M[Rb]/
 0x2:  PUSH Ra/#           | Ra/# -> @SP; SP--
 0x3:  POP  Ra             | SP++; @SP -> Ra
 0x4:  ADD  Ra/#, Rb       | Ra/# + Rb -> Rb
