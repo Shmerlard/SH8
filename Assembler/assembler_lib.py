@@ -16,9 +16,10 @@ IS_EMPTY = "Is_empty"
 ADDRESS = "Line_address"
 
 ORG = ".org"
+DW = 'dw'
 saved_words = [
     ORG,
-    "dw"
+    DW
 ]
 
 code_types = [
@@ -32,7 +33,7 @@ code_types = [
     "LABEL_REF"
 ]
 REGISTER = "REG"
-IMMEDIATE = "IMM"
+IMMEDIATE = "IMM"           # for example #0x2312
 LABEL_REF = "LABEL_REF"
 DIRECT_REF = "DIR_REF"
 
@@ -102,7 +103,7 @@ def content_process(line_num: int, content: str, labels):
         raise Exception(f"{content} in line number {line_num} doesn't have a valid instruction")
     cont_inst = arr[0]
 
-    if (cont_inst == ORG):
+    if (cont_inst == ORG) or (cont_inst == DW):
         return{
             "INSTRUCTION": cont_inst,
             "ARGUEMENT_1": int(arr[1], 16),
@@ -133,6 +134,7 @@ def get_instruction_length(content: dict):
 
     arg_1_labref = False if content["ARGUEMENT_1"] is None or content["ARGUEMENT_1"][0] != LABEL_REF else True
     arg_2_labref = False if content["ARGUEMENT_2"] is None or content["ARGUEMENT_2"][0] != LABEL_REF else True
+
     if arg_1_imm or arg_2_imm:
         return 2
     if arg_1_labref or arg_2_labref:
