@@ -1,0 +1,14 @@
+    .org 0x0
+        MOV #3 R4
+        MOV #4 R5
+        MOV #0x15 R6
+        MOV #22 R9
+        CALL func
+        JMP func
+
+func:   MOV #3 R4
+        RET
+
+    .org 0x2000
+num1:   dw  0x25
+num2:   dw  0x533

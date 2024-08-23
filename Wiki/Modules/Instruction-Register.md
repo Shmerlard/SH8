@@ -21,7 +21,7 @@ each addressing mode is represented by 2 bits for a total of 4 adressing modes f
 there are 3 types of addressing modes
 
 ### Type 1 addressing mods
-this type is used by `MOV`,`AND`,`OR`,`XOR`,`SHR`,`RRC`, `ADD`,`ADDC` and SUB.
+this type is used by `MOV`,`AND`,`OR`,`XOR`,`SHR`,`RRC`, `ADD`,`ADDC` and `SUB`.
 
 ```text
 0x0: Ra  Rb             | MOV Ra  Rb: Ra    -> Rb
@@ -61,7 +61,7 @@ T2) MDR    -> IR         | MDRen, IRin WRsel
 ```
 
 ## Altenate mode
-WIP
+Some instructions, like shift right and shift left, are distinguished by only a single control line. To simplify this, we use the alt bit to tell the CPU whether to execute the standard instruction or its alternate version. This allows us to handle related instructions more efficiently without needing extra opcodes.
 
 ### RTN
 

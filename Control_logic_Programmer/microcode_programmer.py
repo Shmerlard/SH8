@@ -3,9 +3,11 @@ import sh8constants
 import os
 import sys
 
-current_file_directory = os.path.dirname(os.path.abspath(__file__))
+script_dir = os.path.dirname(os.path.abspath(__file__))
+excel_path = os.path.join(script_dir, 'Microcode.xlsx')
 
-microcode = sh8lib.pd.read_excel('../Microcode.xlsx')
+# Read the Excel file using the constructed path
+microcode = sh8lib.pd.read_excel(excel_path)
 rowsNum, colNum = microcode.shape
 
 arr0 = [0] * (sh8constants.ADDRESS_COUNT)
@@ -20,4 +22,4 @@ for rowIdx in range(rowsNum):
     if row == -1:
         continue
     sh8lib.write_to_arrays_from_address(row, Arr)
-sh8lib.write_to_file_from_array(Arr)
+sh8lib.write_to_file_from_array(Arr, script_dir)

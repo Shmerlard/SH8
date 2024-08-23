@@ -1,6 +1,6 @@
 # The shmerlard 16
 
-hi, my name is elad and Im an electrical engineering studern in Ben gurion university.
+hi, my name is elad and Im an electrical engineering student in Ben gurion university.
 I designed a small 16bit cpu, with a mix of jdh8, src, msp430 and the Hack computer.
 this is still a work in progress, but so far it works.
 

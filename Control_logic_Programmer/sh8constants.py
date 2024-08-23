@@ -76,6 +76,13 @@ instructionSet = [
     "JMP",
 ]
 
+simulated_instructions = [
+    "HLT",
+    "CMP",
+    "RLC",
+    "SHL",
+    "RET"
+]
 ADDR_MODE_COUNT = 4
 OPCODE_COUNT = 16
 TC_T_COUNT = 16

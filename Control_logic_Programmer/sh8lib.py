@@ -1,5 +1,6 @@
 import sh8constants as sh8cons
 import pandas as pd
+import os
 
 # returns a code for every string
 def get_code_array_from_line(line: str, lineNum: int = 0):
@@ -48,9 +49,10 @@ def get_address_from_input(con: bool,
     return addr
 
 # create a file with the format for each array
-def write_to_file_from_array(arr_of_arr: list):
+def write_to_file_from_array(arr_of_arr: list, path_to_outfiles_dir: str):
     for count, arr in enumerate(arr_of_arr):
-        with open(f'outfiles/out{count}.txt', 'w+') as outfile:
+        outfile_path = os.path.join(path_to_outfiles_dir, f'out{count}.txt')
+        with open(outfile_path, 'w+') as outfile:
             outfile.write("v3.0 hex words addressed\n")
             for i in range(sh8cons.ADDRESS_COUNT):
                 if(i % 16 == 0):
@@ -72,20 +74,20 @@ def get_opcode_from_instruction(st: str, lineNum: int = 0):
 
 
 def get_valid_row_from_row(row: pd.Series, lineNum: int = 0):
-    opcode = None if pd.isna(row[0]) else int(get_opcode_from_instruction(row[0]))
-    mode = None if pd.isna(row[1]) else int(row[1])
-    time = None if pd.isna(row[2]) else int(row[2])
-    con = None if pd.isna(row[3]) else int(row[3])
-    sc = None if pd.isna(row[4]) else int(row[4])
-    alt = None if pd.isna(row[5]) else int(row[5])
+    opcode = None if pd.isna(row.iloc[0]) else int(get_opcode_from_instruction(row.iloc[0]))
+    mode = None if pd.isna(row.iloc[1]) else int(row.iloc[1])
+    time = None if pd.isna(row.iloc[2]) else int(row.iloc[2])
+    con = None if pd.isna(row.iloc[3]) else int(row.iloc[3])
+    sc = None if pd.isna(row.iloc[4]) else int(row.iloc[4])
+    alt = None if pd.isna(row.iloc[5]) else int(row.iloc[5])
     arr = [con, sc, alt, mode, opcode, time]
 
-    if pd.isna(row[6]):
+    if pd.isna(row.iloc[6]):
         if all(v is None for v in arr):
             return -1
         raise Exception(f'the control lines {row[6]} at line:{lineNum} are invalid')
     else:
-        arr.append(get_code_array_from_line(row[6]))
+        arr.append(get_code_array_from_line(row.iloc[6]))
     return arr
 
 

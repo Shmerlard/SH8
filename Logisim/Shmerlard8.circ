@@ -3677,7 +3677,6 @@ a 6 1 a 7 a 6 0
       <a name="facing" val="west"/>
       <a name="label" val="ALT_MODE"/>
       <a name="output" val="true"/>
-      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(800,580)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -6962,7 +6961,7 @@ a 6 1 a 7 a 6 0
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Y"/>
     </comp>
-    <comp lib="8" loc="(502,1596)" name="Text">
+    <comp lib="8" loc="(500,1595)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="maybe replace the alu_carry_enable_input with small logic"/>
     </comp>
