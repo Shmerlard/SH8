@@ -76,11 +76,13 @@ instructionSet = [
     "JMP",
 ]
 
-simulated_instructions = [
-    "HLT",
+alternative_instructions = [
     "CMP",
     "RLC",
-    "SHL",
+    "SHL"
+]
+simulated_instructions = [
+    "HLT",
     "RET"
 ]
 ADDR_MODE_COUNT = 4

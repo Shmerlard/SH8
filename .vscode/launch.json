@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+        "name": "Python: Debug assembler.py",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "args": ["./Assembler/Assembly_Codes/test.sh8"],
+        "justMyCode": true
+    }
+    
+  ]
+}
