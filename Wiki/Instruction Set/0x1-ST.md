@@ -23,13 +23,13 @@
     7) END                  | TCend
 
 0x3: Ra N: Ra -> M[M[#N]]
-    4) PC -> MAR; PC++      | PCout PCinc MARin
-    5) M[MAR] -> MDR        | MDRen MEMsel
-    6) MDR -> MAR           | MARin MDRen WRsel
-    7) M[MAR] -> MDR        | MDRen MEMsel
-    8) MDR -> MAR           | MARin MDRen WRsel
-    9) Ra -> MDR            | RFout MDRen
-   10) MDR -> M[MAR]        | MDRen WRsel MEMsel
-   11) END                  | TCend
+    3) PC -> MAR; PC++      | PCout PCinc MARin
+    4) M[MAR] -> MDR        | MDRen MEMsel
+    5) MDR -> MAR           | MARin MDRen WRsel
+    6) M[MAR] -> MDR        | MDRen MEMsel
+    7) MDR -> MAR           | MARin MDRen WRsel
+    8) Ra -> MDR            | RFout MDRen
+    9) MDR -> M[MAR]        | MDRen WRsel MEMsel
+   10) END                  | TCend
 
 ```

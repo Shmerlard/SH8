@@ -1,0 +1,149 @@
+{
+    "MOV": {
+        "OPCODE": "0x0",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1
+    },
+    "ST": {
+        "OPCODE": "0x1",
+        "CATEGORY": "REGULAR",
+        "TYPE": 2
+    },
+    "PUSH": {
+        "OPCODE": "0x2",
+        "CATEGORY": "REGULAR",
+        "TYPE": 3,
+        "DST_REG": 0
+    },
+    "POP": {
+        "OPCODE": "0x3",
+        "CATEGORY": "REGULAR",
+        "TYPE": 3,
+        "SRC_REG": 0
+    },
+    "ADD": {
+        "OPCODE": "0x4",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1
+    },
+    "ADDC": {
+        "OPCODE": "0x5",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1
+    },
+    "SUB": {
+        "OPCODE": "0x6",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1
+    },
+    "SHR": {
+        "OPCODE": "0x8",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1
+    },
+    "RRC": {
+        "OPCODE": "0x9",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1
+    },
+    "AND": {
+        "OPCODE": "0xA",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1
+    },
+    "OR": {
+        "OPCODE": "0xB",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1
+    },
+    "XOR": {
+        "OPCODE": "0xC",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1
+    },
+    "CALL": {
+        "OPCODE": "0xE",
+        "CATEGORY": "REGULAR",
+        "TYPE": 3,
+        "SRC_REG": 0
+    },
+    "JMP": {
+        "OPCODE": "0xF",
+        "CATEGORY": "JMP",
+        "TYPE": 3,
+        "DST_REG": 7
+    },
+    "dw": {
+        "CATEGORY": "SAVED_WORD"
+    },
+    ".org": {
+        "CATEGORY": "SAVED_WORD"
+    },
+    "JH": {
+        "OPCODE": "0xF",
+        "CATEGORY": "JMP",
+        "TYPE": 3,
+        "DST_REG": 1
+    },
+    "JEQ": {
+        "OPCODE": "0xF",
+        "CATEGORY": "JMP",
+        "TYPE": 3,
+        "DST_REG": 2
+    },
+    "JHS": {
+        "OPCODE": "0xF",
+        "CATEGORY": "JMP",
+        "TYPE": 3,
+        "DST_REG": 3
+    },
+    "JL": {
+        "OPCODE": "0xF",
+        "CATEGORY": "JMP",
+        "TYPE": 3,
+        "DST_REG": 4
+    },
+    "JNE": {
+        "OPCODE": "0xF",
+        "CATEGORY": "JMP",
+        "TYPE": 3,
+        "DST_REG": 5
+    },
+    "JLS": {
+        "OPCODE": "0xF",
+        "CATEGORY": "JMP",
+        "TYPE": 3,
+        "DST_REG": 6
+    },
+    "HLT": {
+        "OPCODE": "0xB",
+        "CATEGORY": "SIMULATED",
+        "TYPE": 1
+    },
+    "NOT": {
+        "OPCODE": "0xC",
+        "CATEGORY": "SIMULATED",
+        "TYPE": 1
+    },
+    "RET": {
+        "OPCODE": "0x3",
+        "CATEGORY": "SIMULATED",
+        "TYPE": 1,
+        "ADDRESSING_MODE": 3
+    },
+    "CMP": {
+        "OPCODE": "0x6",
+        "CATEGORY": "ALTERNATIVE",
+        "TYPE": 1
+    },
+    "SHL": {
+        "OPCODE": "0x8",
+        "CATEGORY": "ALTERNATIVE",
+        "TYPE": 1
+    },
+    "RLC": {
+        "OPCODE": "0x9",
+        "CATEGORY": "ALTERNATIVE",
+        "TYPE": 1
+    }
+}

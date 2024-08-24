@@ -5,3 +5,6 @@ Assembler/.~lock.Microcode.xlsx\#
 Logisim/.Shmerlard8.circ.autosave
 Control_logic_Programmer/.~lock.Microcode.xlsx\#
 /venv
+/Assembler/__pycache__
+/Assembler/__pycache__
+/Control_logic_Programmer/__pycache__

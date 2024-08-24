@@ -3,6 +3,7 @@ import os
 import sys
 import copy
 
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -29,6 +30,10 @@ def main():
         print("Processing labels adresses and instructions length:")
         processed_lines = aslib.get_processed_lines(lines, labels, orgs)
         print(processed_lines, end="\n\n")
+
+        print("Turning processed lines into machine code:")
+        machine_code = aslib.get_machine_code(processed_lines, labels, orgs)
+        print(machine_code, end="\n\n")
 
 
 if __name__ == "__main__":

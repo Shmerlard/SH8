@@ -76,15 +76,18 @@ instructionSet = [
     "JMP",
 ]
 
-alternative_instructions = [
-    "CMP",
-    "RLC",
-    "SHL"
-]
+alternative_instructions = {
+    "CMP": "SUB",
+    "RLC": "RRC",
+    "SHL": "SHR"
+}
+
 simulated_instructions = [
     "HLT",
+    "NOT",
     "RET"
 ]
+
 ADDR_MODE_COUNT = 4
 OPCODE_COUNT = 16
 TC_T_COUNT = 16
@@ -96,3 +99,4 @@ ADDR_MODE_SHIFT_AMOUNT = 8
 OPCODE_SHIFT_AMOUNT = 4
 
 ADDRESS_COUNT = 32768
+ROM_ADDRESS_COUNT = 32768

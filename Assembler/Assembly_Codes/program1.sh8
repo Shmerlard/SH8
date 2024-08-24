@@ -1,0 +1,29 @@
+% this program gets two numbers
+% putting them in x1 and in x2
+% and then calculates their sum, mov the sum to @x3
+% and then outputs the sum
+
+
+        .org    0x0500      % 0x0000: 
+x1:     dw      0xFFF0      % 0x0500: 0xFFF0
+x2:     dw      0xFFF1      % 0x0501: 0xFFF1
+x3:     dw      0xFFF2      % 0x0502: 0xFFF2
+
+        .org    0x0000      % 0x0000: 
+SetSP:  MOV     #0xFFEF SP  % 0x0000: 0200 FFEF
+Main:   CALL    #getIn      % 0x0002: E200 0010
+        MOV     R7 R4       % 0x0004: 0074
+        CALL    #getIn      % 0x0005: E200 0010
+        MOV     R7 R5       % 0x0007: 0075
+        ST      R4 x1       % 0x0008: 1340 0500
+        ST      R5 x2       % 0x000A: 1350 0501
+        ADD     R4 R5       % 0x000C: 4045
+        ST      R5 X3       % 0x000D: 1350 0502
+        MOV     R5 OUT      % 0x000F: 0053
+
+
+
+getIn:  AND     #0x8000 IN  % 0x0010: A202 8000
+        JZ      #getIn      % 0x0012: F202 0010
+        MOV     IN R7       % 0x0014: 0027
+        RET                 % 0x0015: 3300

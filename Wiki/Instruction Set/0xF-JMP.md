@@ -1,7 +1,7 @@
 # JMP
 
 note: this include every possible jump: JEQ/JNE/JL/JLS/JH/JHS/JMP
-see more: [Condition Logic](../Condition-Logic.md)
+see more: [Condition Logic](../Modules/Condition-Logic.md)
 the register A is set to be the source register by the assembler
 
 ```text
