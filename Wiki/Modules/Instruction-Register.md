@@ -17,10 +17,13 @@ D = indicates the destination register
 ## Addressing modes
 
 each addressing mode is represented by 2 bits for a total of 4 adressing modes for each type
-there are 3 types of addressing modes
+there are 4 types of addressing modes
+### Type 0 addressing mod
+this type is used by `NOP`, `HLT`, `RET`
+they dont have any arguements
 
-### Type 1 addressing mods
-this type is used by `MOV`,`AND`,`OR`,`XOR`,`SHR`,`RRC`, `ADD`,`ADDC` and `SUB`.
+### Type 1 addressing mod
+this type is used by `MOV`,`AND`,`OR`,`XOR`,`SHR`,`RRC`, `ADD`,`ADDC`, `SUB` and `CMP`.
 
 ```text
 0x0: Ra  Rb             | MOV Ra  Rb: Ra    -> Rb

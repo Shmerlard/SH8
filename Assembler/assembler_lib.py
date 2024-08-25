@@ -440,16 +440,12 @@ def get_imm_code(arg_1: int | None, arg_2: int | None):
     else:
         return None
 
-def write_to_file_from_array(arr: list, path_outfile: str):
-    outfile_path = os.path.join(path_outfile, f'out.txt')
+def write_to_file_from_array(arr: list, outfile_path: str):
     with open(outfile_path, 'w+') as outfile:
         outfile.write("v3.0 hex words addressed\n")
         for i in range(sh8cons.ROM_ADDRESS_COUNT):
-            if(i % 16 == 0):
-                outfile.write(f'{i:04x}: ')
-            if(i % 16 != 15):
-                outfile.write(f'{arr[i]:04x} ')
-            else:
-                outfile.write(f'{arr[i]:04x}\n')
+            if(i % 16 == 0): outfile.write(f'{i:04x}: ')
+            if(i % 16 != 15): outfile.write(f'{arr[i]:04x} ')
+            else: outfile.write(f'{arr[i]:04x}\n')
     print("all done!")
 

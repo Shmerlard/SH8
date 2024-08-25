@@ -30,10 +30,6 @@ in this command the SP (reg#0) is selected to be src reg
    11) MDR -> M[MAR]            | MDRen MEMsel WRsel
    12) END                      | TCend
 
-0x3: RET: SP++; @SP -> PC
-    3) SP++ -> Y                | RFout INCA Yin
-    4) Y -> MAR : Y -> SP       | RFin Yout MARin
-    5) M[MAR] -> MDR            | MDRen MEMsel
-    6) MDR -> PC                | PCin MDRen WRsel
-    7) END                      | TCend
+0x3: N: SP++; @SP -> M[M[N]]
+    3) END                      | TCend
 ```
