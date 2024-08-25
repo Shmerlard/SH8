@@ -30,22 +30,26 @@ in order to see the working cpu in logisim: you need to build version `3.9.0` fr
 ## Instruction set
 
 ```text
-0x0:  MOV  Ra/#, Rb       | Ra/# -> Rb
-0x1:  ST   Ra/#, Rb/#     | Ra/# -> M[Rb]/
-0x2:  PUSH Ra/#           | Ra/# -> @SP; SP--
-0x3:  POP  Ra             | SP++; @SP -> Ra
-0x4:  ADD  Ra/#, Rb       | Ra/# + Rb -> Rb
-0x5:  ADDC Ra/#, Rb       | Ra/# + Rb + c -> Rb
-0x6:  SUB  Ra/#, Rb       | Rb - Ra/# -> Rb
-0x7:  CMP  Ra/#, Rb       | Rb - Ra/#
-0x8:  SHR  Ra/#, Rb       | SHR Rb (Ra/# times) -> Rb
-0x9   RRC  Ra/#, Rb       | RRC Rb (Ra/# times) -> Rb
-0xA:  AND  Ra/#, Rb       | Ra/# AND Rb -> Rb
-0xB:  OR   Ra/#, Rb       | Ra/# OR  Rb -> Rb
-0xC:  XOR  Ra/#, Rb       | Ra/# XOR Rb -> Rb
-0xD:
-0xE:  CALL DST            | PC -> @SP; DST -> PC; SP-- -> SP;
-0xF:  JMP  DST            | DST -> PC
+0x00:  NOP
+0x01:  MOV  Ra/#, Rb       | Ra/# -> Rb
+0x02:  ST   Ra/#, Rb/#     | Ra/# -> M[Rb]/
+0x03:  PUSH Ra/#           | Ra/# -> @SP; SP--
+0x04:  POP  Ra             | SP++; @SP -> Ra
+0x05:  ADD  Ra/#, Rb       | Ra/# + Rb -> Rb
+0x06:  ADDC Ra/#, Rb       | Ra/# + Rb + c -> Rb
+0x07:  SUB  Ra/#, Rb       | Rb - Ra/# -> Rb
+0x08:  CMP  Ra/#, Rb       | Rb - Ra/#
+0x09:  SHR  Ra/#, Rb       | SHR Rb (Ra/# times) -> Rb
+0x0A:  SHL
+0x0B:  RRC  Ra/#, Rb       | RRC Rb (Ra/# times) -> Rb
+0x0C:  RLC
+0x0D:  AND  Ra/#, Rb       | Ra/# AND Rb -> Rb
+0x0E:  OR   Ra/#, Rb       | Ra/# OR  Rb -> Rb
+0x0F:  XOR  Ra/#, Rb       | Ra/# XOR Rb -> Rb
+0x10:  NOT
+0x11:  CALL DST            | PC -> @SP; DST -> PC; SP-- -> SP;
+0x12:  RET
+0x13:  JMP  DST            | DST -> PC
 ```
 
 for more simulated instructions see: [Simulated Instructions](/Wiki/Simulated-Instructions.md)
@@ -55,12 +59,12 @@ for more simulated instructions see: [Simulated Instructions](/Wiki/Simulated-In
 ```text
 0: SP/REG0  : STACK pointer    
 1: SR/REG1  : Status register
-2: REG2     : GP
-3: REG3     : GP
+2: REG2     : GP Input
+3: REG3     : GP Output
 4: REG3     : GP
 5: REG4     : GP
-6: REG5     : GP/Input REG ## NOT YET IMPLEMENTED
-7: REG6     : GP/Output REG ## NOT YET IMPLEMENTED
+6: REG5     : GP
+7: REG6     : GP
 ```
 
 ## [Memory](/Wiki/Modules/Memory-Registers.md)
@@ -80,23 +84,15 @@ the memory is mapped in the following way:
 The instruction register is a 16-bit register
 
 ```text
-the format is XXXX-SSSS-FFAA-DDDD
+the format is XXXX-XUMM-SSSS-DDDD
 X = the opcode of the instruction
+U = Currently not in use
+M = indicates the addressing mode
 S = indicates the source register
-F = Currently not in use
-A = indicates the addressing mode
 D = indicates the destination register
 ```
 
 (see [addressing modes](/Wiki/Modules/Instruction-Register.md#addressing-modes)) for more info
-
-## TODOS
-
-1) Whats the difference between my ram and logisim ram?
-2) Implement more jmp conditions
-3) relative addressing in the assembler
-4) add an option to correct mistakes in the excel
-5) solve the carry problem
 
 ## Full diagram
 

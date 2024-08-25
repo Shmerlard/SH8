@@ -52,7 +52,6 @@ this type is used by `PUSH`,`POP`,`CALL` and `JMP`
 0x3: N                  | PUSH N: M[M[#N]] -> @SP
 ```
 ^note 1: in the examples above there are also `SP++` steps which I didnt include here.
-^note 2: the `POP N` is implemented in the CPU as `RET`.
 
 ### how fetching is obtained?
 
@@ -60,25 +59,4 @@ this type is used by `PUSH`,`POP`,`CALL` and `JMP`
 T0) PC     -> MAR; PC++  | PCout, MARin, PCinc
 T1) M[MAR] -> MDR        | MDRen, MEMsel, 
 T2) MDR    -> IR         | MDRen, IRin WRsel
-```
-
-## Altenate mode
-Some instructions, like shift right and shift left, are distinguished by only a single control line. To simplify this, we use the alt bit to tell the CPU whether to execute the standard instruction or its alternate version. This allows us to handle related instructions more efficiently without needing extra opcodes.
-
-### RTN
-
-```text
-(Rx)  Refers to the data inside register x
-(M[Rx]) Refers to the data at the with the address Rx
-
-(A ->  B) A is moving to B
-(A &   B) A bitwise AND B
-(A ||  B) A bitwise OR B
-(NOT A  ) A bitwise NOT
-(A XOR B) A bitwise XOR B
-(A >>  B) A is shifted right bitwise B times (MSB of A becomes 0 each shift)
-(A <<  B) A is shifted left bitwise B times (LSB of A becomes 0 each shift)
-(A RR  B) A is rotated right B times
-(A RL  B) A is rotated left B times
-
 ```
