@@ -3,6 +3,7 @@ import os
 import sys
 import copy
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -33,7 +34,8 @@ def main():
 
         print("Turning processed lines into machine code:")
         machine_code = aslib.get_machine_code(processed_lines, labels, orgs)
-        print(machine_code, end="\n\n")
+        aslib.write_to_file_from_array(machine_code, f'{script_dir}')
+        # print(machine_code, end="\n\n")
 
 
 if __name__ == "__main__":

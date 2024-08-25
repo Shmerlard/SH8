@@ -75,7 +75,7 @@ the memory is mapped in the following way:
 0xD000 - 0xFFFF: NOT IN USE          (12KiB UNUSED)
 ```
 
-## [Instruction format](/Wiki/Modules/Instruction-Register.md)
+## [Instruction format](./Wiki/Modules/Instruction-Register.md)
 
 The instruction register is a 16-bit register
 
