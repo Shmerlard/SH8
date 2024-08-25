@@ -1,11 +1,11 @@
 import sys
 import copy
 import os
-import json
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import Control_logic_Programmer.sh8constants as sh8cons
 import assembler_constants as ascon
+from instructions import instructions
 
 COMMENT_CHAR = '%'
 MAX_REGISTER = 16
@@ -90,9 +90,6 @@ TYPE_3_INST = [
 ]
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-instructions_path = os.path.join(script_dir, 'instructions.json')
-with open(instructions_path, 'r') as file:
-    instructions = json.load(file)
 
 # ############ STEP 2 ##############
 # removes comments and tabs
@@ -121,7 +118,7 @@ def find_labels_and_orgs(lines: list):
             continue
 
         label = get_label(line_num, line.split())
-        if label is None: continue
+        if label.get(LABEL) is None: continue
         if label in labels: raise Exception("Assembler Error!, duplicate declaration of labels")
 
         labels.append(label)
@@ -143,7 +140,8 @@ def get_origin(line_num: str, line: int):
 def get_label(line_num: int, line: list):
     word = line[0]
 
-    if is_valid_inst(word): return None
+    if is_valid_inst(word):
+        return {}
     if (word.endswith(":")):
         return {
             LABEL: word[:-1],
@@ -184,27 +182,31 @@ def line_process(line_num: int, line: str, labels: list, address: int):
         }
 
     line_label = get_label(line_num, line)
-    line_label_name = None
-    if line_label is not None:
-        # line_label[ADDRESS] = address
+    if line_label.get(LABEL) is not None:
         labels[labels.index(line_label)][ADDRESS] = address
-        line_label_name = line_label[LABEL]
         line.pop(0)
 
     if not line:
         raise Exception(f'error at line number {line_num + 1} only label')
 
     # Instrcution handling
-    valid_inst = is_valid_inst(line[0])
-    if (not valid_inst):
-        raise Exception(f'Error at line number: {line_num}, instruction {valid_inst} is not valid')
-    line_instruction = line[0]                  # the string, ex: 'MOV'
-    line_instruction_type = valid_inst          # the type, ex: 'REGULAR_INST'
+    line_instruction = line[0]
+    instruction_val = instructions.get(line_instruction)
+    if instruction_val is None:
+        raise Exception(f'Assembler error in line number {line_num}: instruction {line_instruction} is invalid')
+
+    opcode = instruction_val.get(ascon.OPCODE)
+    line_instruction_type = instruction_val.get(ascon.TYPE)
     line.pop(0)
 
+    # alternate bit handling
+    inst_category = instructions.get(line_instruction).get(ascon.CATEGORY)
+    alternate_bit = True if inst_category == ascon.ALTERNATE_INST else False
+
     # arguemnts handling
-    line_arg_1 = (None, None)
-    line_arg_2 = (None, None)
+    def_src_reg = {}
+    line_arg_1 = {}
+    line_arg_2 = {}
     if line:
         line_arg_1 = get_arg_type(line_num, line[0], labels)
         line.pop(0)
@@ -214,20 +216,22 @@ def line_process(line_num: int, line: str, labels: list, address: int):
     if line:
         raise Exception(f'too many arguemnts in line number {line_num}')
 
-    if line_instruction_type == ascon.SIMULATED_INST:
-        line_instruction, line_arg_1, line_arg_2 = get_real_instruction(line_num, line_instruction, line_arg_1, line_arg_2)
+    # src,dst reg handling
+
+
     line_length = get_instruction_length(line_instruction, line_arg_1, line_arg_2)
 
     return {
         LINE_NUMBER: line_num,
-        LABEL: line_label_name,
-        INSTRUCTION: line_instruction,
+        LABEL: line_label.get(LABEL),
+        INSTRUCTION: line_instruction.get(INSTRUCTION),
         INSTRUCTION_TYPE: line_instruction_type,
         ARG_1: line_arg_1,
         ARG_2: line_arg_2,
         LENGTH: line_length,
-        # IS_EMPTY: False,
-        ADDRESS: address
+        ADDRESS: address,
+        "OPCODE": opcode,
+        "ALT_BIT": alternate_bit,
     }
 
 
@@ -384,8 +388,7 @@ def get_addressing_mode(line_number: int, instruction_name: str, arg_1_type: str
 
     exc_err = f'Error at line number {line_number}'
 
-    if (instruction_name == "POP") and (arg_1_type == RET_ARG):
-        return 3
+    if (instruction_name == "POP") and (arg_1_type == RET_ARG): return 3
 
     # Type 1
     elif instructions.get(instruction_name).get("Type") == 1:
@@ -423,6 +426,9 @@ def get_addressing_mode(line_number: int, instruction_name: str, arg_1_type: str
         raise Exception(exc_err)
 
 def get_src_dst_regs(instruction_name: str, arg_1: tuple, arg_2: tuple):
+    default_src_reg = instructions.get(instruction_name).get("SRC_REG")
+    default_dst_reg = instructions.get(instruction_name).get("DST_REG")
+
     pass
 
 def get_imm_code(arg_1: tuple, arg_2: tuple):

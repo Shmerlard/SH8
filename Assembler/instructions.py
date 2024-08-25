@@ -1,4 +1,4 @@
-{
+instructions = {
     "MOV": {
         "OPCODE": "0x0",
         "CATEGORY": "REGULAR",
@@ -118,12 +118,14 @@
     "HLT": {
         "OPCODE": "0xB",
         "CATEGORY": "SIMULATED",
-        "TYPE": 1
+        "TYPE": 1,
+        "IMM_VAL": "0x0010"
     },
     "NOT": {
         "OPCODE": "0xC",
         "CATEGORY": "SIMULATED",
-        "TYPE": 1
+        "TYPE": 1,
+        "IMM_VAL": "0xFFFF"
     },
     "RET": {
         "OPCODE": "0x3",
