@@ -1,151 +1,185 @@
 instructions = {
-    "MOV": {
-        "OPCODE": "0x0",
+    "NOP": {
+        "OPCODE": "0x00",
         "CATEGORY": "REGULAR",
-        "TYPE": 1
+        "TYPE": 0,
+        "NUM_ARGS": 0
+    },
+    "MOV": {
+        "OPCODE": "0x01",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1,
+        "NUM_ARGS": 2
     },
     "ST": {
-        "OPCODE": "0x1",
+        "OPCODE": "0x02",
         "CATEGORY": "REGULAR",
-        "TYPE": 2
+        "TYPE": 2,
+        "NUM_ARGS": 2
     },
     "PUSH": {
-        "OPCODE": "0x2",
+        "OPCODE": "0x03",
         "CATEGORY": "REGULAR",
         "TYPE": 3,
-        "DST_REG": 0
+        "DST_REG": "@0",
+        "NUM_ARGS": 1
     },
     "POP": {
-        "OPCODE": "0x3",
+        "OPCODE": "0x04",
         "CATEGORY": "REGULAR",
         "TYPE": 3,
-        "SRC_REG": 0
+        "SRC_REG": "@0",
+        "NUM_ARGS": 1
     },
     "ADD": {
-        "OPCODE": "0x4",
+        "OPCODE": "0x05",
         "CATEGORY": "REGULAR",
-        "TYPE": 1
+        "TYPE": 1,
+        "NUM_ARGS": 2
     },
     "ADDC": {
-        "OPCODE": "0x5",
+        "OPCODE": "0x06",
         "CATEGORY": "REGULAR",
-        "TYPE": 1
+        "TYPE": 1,
+        "NUM_ARGS": 2
     },
     "SUB": {
-        "OPCODE": "0x6",
+        "OPCODE": "0x07",
         "CATEGORY": "REGULAR",
-        "TYPE": 1
-    },
-    "SHR": {
-        "OPCODE": "0x8",
-        "CATEGORY": "REGULAR",
-        "TYPE": 1
-    },
-    "RRC": {
-        "OPCODE": "0x9",
-        "CATEGORY": "REGULAR",
-        "TYPE": 1
-    },
-    "AND": {
-        "OPCODE": "0xA",
-        "CATEGORY": "REGULAR",
-        "TYPE": 1
-    },
-    "OR": {
-        "OPCODE": "0xB",
-        "CATEGORY": "REGULAR",
-        "TYPE": 1
-    },
-    "XOR": {
-        "OPCODE": "0xC",
-        "CATEGORY": "REGULAR",
-        "TYPE": 1
-    },
-    "CALL": {
-        "OPCODE": "0xE",
-        "CATEGORY": "REGULAR",
-        "TYPE": 3,
-        "SRC_REG": 0
-    },
-    "JMP": {
-        "OPCODE": "0xF",
-        "CATEGORY": "JMP",
-        "TYPE": 3,
-        "DST_REG": 7
-    },
-    "dw": {
-        "CATEGORY": "SAVED_WORD"
-    },
-    ".org": {
-        "CATEGORY": "SAVED_WORD"
-    },
-    "JH": {
-        "OPCODE": "0xF",
-        "CATEGORY": "JMP",
-        "TYPE": 3,
-        "DST_REG": 1
-    },
-    "JEQ": {
-        "OPCODE": "0xF",
-        "CATEGORY": "JMP",
-        "TYPE": 3,
-        "DST_REG": 2
-    },
-    "JHS": {
-        "OPCODE": "0xF",
-        "CATEGORY": "JMP",
-        "TYPE": 3,
-        "DST_REG": 3
-    },
-    "JL": {
-        "OPCODE": "0xF",
-        "CATEGORY": "JMP",
-        "TYPE": 3,
-        "DST_REG": 4
-    },
-    "JNE": {
-        "OPCODE": "0xF",
-        "CATEGORY": "JMP",
-        "TYPE": 3,
-        "DST_REG": 5
-    },
-    "JLS": {
-        "OPCODE": "0xF",
-        "CATEGORY": "JMP",
-        "TYPE": 3,
-        "DST_REG": 6
-    },
-    "HLT": {
-        "OPCODE": "0xB",
-        "CATEGORY": "SIMULATED",
         "TYPE": 1,
-        "IMM_VAL": "0x0010"
-    },
-    "NOT": {
-        "OPCODE": "0xC",
-        "CATEGORY": "SIMULATED",
-        "TYPE": 1,
-        "IMM_VAL": "0xFFFF"
-    },
-    "RET": {
-        "OPCODE": "0x3",
-        "CATEGORY": "SIMULATED",
-        "TYPE": 1,
-        "ADDRESSING_MODE": 3
+        "NUM_ARGS": 2
     },
     "CMP": {
-        "OPCODE": "0x6",
-        "CATEGORY": "ALTERNATIVE",
-        "TYPE": 1
+        "OPCODE": "0x08",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1,
+        "NUM_ARGS": 2
+    },
+    "SHR": {
+        "OPCODE": "0x09",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1,
+        "NUM_ARGS": 2
     },
     "SHL": {
-        "OPCODE": "0x8",
-        "CATEGORY": "ALTERNATIVE",
-        "TYPE": 1
+        "OPCODE": "0x0A",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1,
+        "NUM_ARGS": 2
+    },
+    "RRC": {
+        "OPCODE": "0x0B",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1,
+        "NUM_ARGS": 2
     },
     "RLC": {
-        "OPCODE": "0x9",
-        "CATEGORY": "ALTERNATIVE",
-        "TYPE": 1
+        "OPCODE": "0x0C",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1,
+        "NUM_ARGS": 2
+    },
+    "AND": {
+        "OPCODE": "0x0D",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1,
+        "NUM_ARGS": 2
+    },
+    "OR": {
+        "OPCODE": "0x0E",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1,
+        "NUM_ARGS": 2
+    },
+    "XOR": {
+        "OPCODE": "0x0F",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1,
+        "NUM_ARGS": 2
+    },
+    "NOT": {
+        "OPCODE": "0x10",
+        "CATEGORY": "REGULAR",
+        "TYPE": 1,
+        "NUM_ARGS": 1
+    },
+    "CALL": {
+        "OPCODE": "0x11",
+        "CATEGORY": "REGULAR",
+        "TYPE": 3,
+        "SRC_REG": "@0",
+        "NUM_ARGS": 1
+    },
+    "RET": {
+        "OPCODE": "0x12",
+        "CATEGORY": "REGULAR",
+        "TYPE": 0,
+        "SRC_REG": "@0",
+        "DST_REG": "@0",
+        "NUM_ARGS": 0
+    },
+    "JMP": {
+        "OPCODE": "0x13",
+        "CATEGORY": "REGULAR",
+        "TYPE": 3,
+        "DST_REG": 7,
+        "NUM_ARGS": 1
+    },
+    "HLT": {
+        "OPCODE": "0x14",
+        "CATEGORY": "REGULAR",
+        "TYPE": 0,
+        "DST_REG": 1,
+        "NUM_ARGS": 0
+    },
+    "dw": {
+        "CATEGORY": "SAVED_WORD",
+        "NUM_ARGS": 1
+    },
+    ".org": {
+        "CATEGORY": "SAVED_WORD",
+        "NUM_ARGS": 1
+    },
+    "JH": {
+        "OPCODE": "0x0F",
+        "CATEGORY": "REGULAR",
+        "TYPE": 3,
+        "DST_REG": 1,
+        "NUM_ARGS": 1
+    },
+    "JEQ": {
+        "OPCODE": "0x0F",
+        "CATEGORY": "REGULAR",
+        "TYPE": 3,
+        "DST_REG": 2,
+        "NUM_ARGS": 1
+    },
+    "JHS": {
+        "OPCODE": "0x0F",
+        "CATEGORY": "REGULAR",
+        "TYPE": 3,
+        "DST_REG": 3,
+        "NUM_ARGS": 1
+    },
+    "JL": {
+        "OPCODE": "0x0F",
+        "CATEGORY": "REGULAR",
+        "TYPE": 3,
+        "DST_REG": 4,
+        "NUM_ARGS": 1
+    },
+    "JNE": {
+        "OPCODE": "0x0F",
+        "CATEGORY": "REGULAR",
+        "TYPE": 3,
+        "DST_REG": 5,
+        "NUM_ARGS": 1
+    },
+    "JLS": {
+        "OPCODE": "0x0F",
+        "CATEGORY": "REGULAR",
+        "TYPE": 3,
+        "DST_REG": 6,
+        "NUM_ARGS": 1
     }
 }

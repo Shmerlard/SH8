@@ -57,45 +57,13 @@ aluCtrlLines = [
     "INCA"
 ]
 
-instructionSet = [
-    "MOV",
-    "ST",
-    "PUSH",
-    "POP",
-    "ADD",
-    "ADDC",
-    "SUB",
-    "CMP",
-    "SHR",
-    "RRC",
-    "AND",
-    "OR",
-    "XOR",
-    "IOR",
-    "CALL",
-    "JMP",
-]
-
-alternative_instructions = {
-    "CMP": "SUB",
-    "RLC": "RRC",
-    "SHL": "SHR"
-}
-
-simulated_instructions = [
-    "HLT",
-    "NOT",
-    "RET"
-]
-
 ADDR_MODE_COUNT = 4
-OPCODE_COUNT = 16
+OPCODE_COUNT = 32
 TC_T_COUNT = 16
 
 CON_SHIFT_AMOUNT = 12
 SC_SHIFT_AMOUNT = 11
-ALT_SHIFT_AMOUNT = 10
-ADDR_MODE_SHIFT_AMOUNT = 8
+ADDR_MODE_SHIFT_AMOUNT = 9
 OPCODE_SHIFT_AMOUNT = 4
 
 ADDRESS_COUNT = 32768

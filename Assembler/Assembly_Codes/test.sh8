@@ -1,6 +1,6 @@
     .org 0x500
-num3:   dw 0x2513       % 1280
-num4:   dw 0x2943       % 1282
+num3:   dw 0x2513       % 1280  9491
+num4:   dw 0x2943       % 1281
 
     
     
@@ -10,7 +10,7 @@ num4:   dw 0x2943       % 1282
         MOV #0x15 R6    % 4
         MOV #22 R9      % 6
 x1:     MOV R2 R5       % 8
-x2:     MOV R5 @R8      % 9
+x2:     MOV @R5 R8      % 9
         CALL func       % 10
         JMP func        % 12
 
@@ -19,4 +19,4 @@ func:   MOV #3 R4       % 14
 
     .org 0x2000         % 8192
 num1:   dw  0x25        % 8192
-num2:   dw  0x533       % 8194
+num2:   dw  0x533       % 8193
