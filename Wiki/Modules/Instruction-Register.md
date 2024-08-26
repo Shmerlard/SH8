@@ -18,6 +18,7 @@ D = indicates the destination register
 
 each addressing mode is represented by 2 bits for a total of 4 adressing modes for each type
 there are 4 types of addressing modes
+
 ### Type 0 addressing mod
 this type is used by `NOP`, `HLT`, `RET`
 they dont have any arguements
