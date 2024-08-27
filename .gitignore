@@ -9,3 +9,5 @@ Control_logic_Programmer/.~lock.Microcode.xlsx\#
 /Assembler/__pycache__
 /Control_logic_Programmer/__pycache__
 *.xlsx#
+/Assembler/python/venv
+/Control_logic_Programmer/python/venv
