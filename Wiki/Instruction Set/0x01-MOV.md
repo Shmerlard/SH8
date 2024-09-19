@@ -18,7 +18,7 @@
     5) MDR -> Rb            | RFin   RFin  DSTsel MDRen WRsel
     6) END                  | TCend
 
-0x1: N @Rb: M[#N] Rb
+0x3: N @Rb: M[#N] Rb
     3) PC -> MAR; PC++      | PCout PCinc MARin
     4) M[MAR] -> MDR        | MDRen MEMsel
     5) MDR -> MAR           | MARin MDRen WRsel

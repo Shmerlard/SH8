@@ -74,7 +74,7 @@ def get_opcode_from_instruction(st: str, lineNum: int = 0):
 
 
 def get_valid_row_from_row(row: pd.Series, lineNum: int = 0):
-    opcode = None if pd.isna(row.iloc[0]) else int(get_opcode_from_instruction(row.iloc[0]))
+    opcode = None if pd.isna(row.iloc[0]) else int(get_opcode_from_instruction(row.iloc[0]), 16)
     mode = None if pd.isna(row.iloc[1]) else int(row.iloc[1])
     time = None if pd.isna(row.iloc[2]) else int(row.iloc[2])
     con = None if pd.isna(row.iloc[3]) else int(row.iloc[3])

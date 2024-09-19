@@ -3,7 +3,9 @@ import os
 import sys
 import copy
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
