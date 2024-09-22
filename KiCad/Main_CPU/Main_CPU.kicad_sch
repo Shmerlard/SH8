@@ -1,0 +1,51 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "ef89d34a-0faf-4d0b-8858-25a7619a319e")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 68.58 26.67)
+		(size 40.64 44.45)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e5e5f22c-3dd6-4e6e-b5f6-bd5aaccf4a39")
+		(property "Sheetname" "Register_File"
+			(at 68.58 25.9584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Register_File.kicad_sch"
+			(at 68.58 71.7046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Main_CPU"
+				(path "/ef89d34a-0faf-4d0b-8858-25a7619a319e"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
