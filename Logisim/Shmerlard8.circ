@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.9.0" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v3.9.0(https://github.com/logisim-evolution/).
+<project source="3.9.0dev" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.9.0dev(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -2255,28 +2255,24 @@ a04 124 a05 4 a06 15 a09 16
       <a name="label" val="T_TIME"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(570,440)" name="Ground">
-      <a name="width" val="2"/>
-    </comp>
     <comp lib="0" loc="(650,550)" name="Splitter">
       <a name="appear" val="right"/>
-      <a name="bit0" val="5"/>
-      <a name="bit1" val="5"/>
-      <a name="bit10" val="3"/>
-      <a name="bit11" val="2"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="0"/>
-      <a name="bit14" val="0"/>
-      <a name="bit2" val="5"/>
-      <a name="bit3" val="5"/>
-      <a name="bit5" val="4"/>
-      <a name="bit6" val="4"/>
-      <a name="bit7" val="4"/>
-      <a name="bit8" val="4"/>
-      <a name="bit9" val="3"/>
+      <a name="bit0" val="4"/>
+      <a name="bit1" val="4"/>
+      <a name="bit10" val="2"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="0"/>
+      <a name="bit2" val="4"/>
+      <a name="bit3" val="4"/>
+      <a name="bit4" val="3"/>
+      <a name="bit5" val="3"/>
+      <a name="bit6" val="3"/>
+      <a name="bit7" val="3"/>
+      <a name="bit8" val="3"/>
+      <a name="bit9" val="2"/>
       <a name="facing" val="west"/>
-      <a name="fanout" val="6"/>
-      <a name="incoming" val="15"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="13"/>
       <a name="spacing" val="2"/>
     </comp>
     <comp lib="0" loc="(990,240)" name="Pin">
@@ -2297,9 +2293,9 @@ a04 124 a05 4 a06 15 a09 16
       <a name="width" val="8"/>
     </comp>
     <comp lib="4" loc="(780,290)" name="ROM">
-      <a name="addrWidth" val="15"/>
+      <a name="addrWidth" val="13"/>
       <a name="appearance" val="logisim_evolution"/>
-      <a name="contents">addr/data: 15 8
+      <a name="contents">addr/data: 13 8
 6 0 40 13*0 6 0 40 10
 28 11*0 6 0 40 30 10 11*0
 6 0 40 30 10 28 10*0 6
@@ -2640,9 +2636,9 @@ a04 124 a05 4 a06 15 a09 16
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="4" loc="(780,540)" name="ROM">
-      <a name="addrWidth" val="15"/>
+      <a name="addrWidth" val="13"/>
       <a name="appearance" val="logisim_evolution"/>
-      <a name="contents">addr/data: 15 8
+      <a name="contents">addr/data: 13 8
 1 a 6 13*0 1 a 6 0
 0 10 10*0 1 a 6 1 2
 e 10 9*0 1 a 6 1 2
@@ -3024,9 +3020,9 @@ a 6 4*10 9*0 1 a 6 13*0
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="4" loc="(780,790)" name="ROM">
-      <a name="addrWidth" val="15"/>
+      <a name="addrWidth" val="13"/>
       <a name="appearance" val="logisim_evolution"/>
-      <a name="contents">addr/data: 15 8
+      <a name="contents">addr/data: 13 8
 19*0 3a 4 30*0 6a 0 4 13*0
 72 4 14*0 1 2 4 29*0 1
 12 14*0 1 12 15*0 3a 0 4e
@@ -3225,7 +3221,6 @@ a 6 4*10 9*0 1 a 6 13*0
     <wire from="(540,500)" to="(630,500)"/>
     <wire from="(540,520)" to="(630,520)"/>
     <wire from="(540,540)" to="(630,540)"/>
-    <wire from="(570,440)" to="(630,440)"/>
     <wire from="(650,550)" to="(740,550)"/>
     <wire from="(740,300)" to="(740,550)"/>
     <wire from="(740,300)" to="(780,300)"/>
