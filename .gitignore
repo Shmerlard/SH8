@@ -11,3 +11,6 @@ Control_logic_Programmer/.~lock.Microcode.xlsx\#
 *.xlsx#
 /Assembler/python/venv
 /Control_logic_Programmer/python/venv
+fp-info-cache
+Instruction_Register-backups
+*/*-backups/
