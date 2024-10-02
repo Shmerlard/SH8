@@ -6220,7 +6220,7 @@
 		)
 		(uuid "3954577a-8573-41d0-b6ce-78e0219366ff")
 	)
-	(label "B[0..15]"
+	(label "Y[0..15]"
 		(at 339.09 50.8 0)
 		(fields_autoplaced yes)
 		(effects

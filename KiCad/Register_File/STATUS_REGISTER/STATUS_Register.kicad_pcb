@@ -12534,7 +12534,7 @@
 	)
 	(gr_poly
 		(pts
-			(xy 173.6 55) (xy 173.6 70) (xy 190 70) (xy 190 65.1) (xy 193 62.1) (xy 193 55)
+			(xy 166.5 55) (xy 166.5 70) (xy 191 70) (xy 191 55)
 		)
 		(stroke
 			(width 0.1)
@@ -12629,7 +12629,7 @@
 		(uuid "eec99c2f-3e1b-45e6-bc1f-049e529948f2")
 	)
 	(gr_text "rev 1.0"
-		(at 174 65.3 0)
+		(at 166.85 65.35 0)
 		(layer "F.SilkS")
 		(uuid "2f225253-201d-4991-b67e-46844a72bf7a")
 		(effects
@@ -12706,7 +12706,7 @@
 		)
 	)
 	(gr_text "25/9/24"
-		(at 174 68.7 0)
+		(at 166.85 68.75 0)
 		(layer "F.SilkS")
 		(uuid "9067aeef-750a-467d-819e-e95b4ac7dfb0")
 		(effects
@@ -12744,7 +12744,7 @@
 		)
 	)
 	(gr_text "SH8"
-		(at 174 58.2 0)
+		(at 166.85 58.25 0)
 		(layer "F.SilkS")
 		(uuid "9b3bb9ec-f1aa-4702-ac78-cd0752b7562e")
 		(effects
@@ -12755,8 +12755,8 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "SR Register"
-		(at 174 61.7 0)
+	(gr_text "Status Register"
+		(at 166.85 61.75 0)
 		(layer "F.SilkS")
 		(uuid "d1c76bf4-cf01-49ae-85fb-3744a5d2646c")
 		(effects
