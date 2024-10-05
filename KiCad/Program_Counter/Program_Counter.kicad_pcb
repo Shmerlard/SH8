@@ -1158,6 +1158,494 @@
 			)
 		)
 	)
+	(footprint "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
+		(layer "F.Cu")
+		(uuid "2caebb69-029e-4c0c-b980-2476b1c4be1e")
+		(at 2.975 2.825)
+		(descr "JST XH series connector, S2B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf), generated with kicad-footprint-generator")
+		(tags "connector JST XH horizontal")
+		(property "Reference" "J2"
+			(at 1.25 -3.5 0)
+			(layer "F.SilkS")
+			(uuid "0e97d1d6-cdfb-470f-b279-b7206af56e98")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02_Socket"
+			(at 1.25 10.4 0)
+			(layer "F.Fab")
+			(uuid "1b98262f-f753-4efc-987f-8923a542e30c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "590540ef-685f-4646-a717-9fedb8a57d2f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1c92f9d8-f65a-4548-bb5b-af1328d4c122")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f2c38d4b-b236-47a4-bf46-10a2d6c55dd6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
+		(path "/1be87def-db0c-4e4b-949e-713ad1ed5aba")
+		(sheetname "Root")
+		(sheetfile "Program_Counter.kicad_sch")
+		(attr through_hole)
+		(fp_line
+			(start -2.56 -2.41)
+			(end -1.14 -2.41)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "bb7f1816-bd72-4d5b-99af-95be1c6b4ebd")
+		)
+		(fp_line
+			(start -2.56 9.31)
+			(end -2.56 -2.41)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "a70f70a0-4061-40b6-8b93-df95ffdb1dab")
+		)
+		(fp_line
+			(start -1.14 -2.41)
+			(end -1.14 2.09)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "535fc7fe-73b0-462b-8fea-af37568193d1")
+		)
+		(fp_line
+			(start -1.14 2.09)
+			(end 1.25 2.09)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "8d996fbe-db1f-449e-be4b-cc162dbda162")
+		)
+		(fp_line
+			(start -0.3 -2.1)
+			(end 0.3 -2.1)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "9ff35571-dbd1-4728-8775-eddf2663c7e7")
+		)
+		(fp_line
+			(start -0.25 3.2)
+			(end -0.25 8.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e0701b6c-bfe6-4c8c-9218-7a01e3e30af7")
+		)
+		(fp_line
+			(start -0.25 8.7)
+			(end 0.25 8.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "5a499d94-0138-44f1-aec5-47b72b0788a4")
+		)
+		(fp_line
+			(start 0 -1.5)
+			(end -0.3 -2.1)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "4af9462f-bfb9-4248-9abb-617580971153")
+		)
+		(fp_line
+			(start 0.25 3.2)
+			(end -0.25 3.2)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "a2097595-3fd4-4c49-9dcf-4e49050e9668")
+		)
+		(fp_line
+			(start 0.25 8.7)
+			(end 0.25 3.2)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "4f13457a-ac95-4121-8336-7f8847b75ca7")
+		)
+		(fp_line
+			(start 0.3 -2.1)
+			(end 0 -1.5)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "9d3a656b-3c3d-4c8c-9138-e2b9ea67f9ab")
+		)
+		(fp_line
+			(start 1.25 9.31)
+			(end -2.56 9.31)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "92d70cfe-3a33-43f3-b963-aac766e8829f")
+		)
+		(fp_line
+			(start 1.25 9.31)
+			(end 5.06 9.31)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "8487c818-474a-4454-a7c0-50f5a01efe4b")
+		)
+		(fp_line
+			(start 2.25 3.2)
+			(end 2.25 8.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2c392ab2-570b-42f3-9d4d-5c861dd59162")
+		)
+		(fp_line
+			(start 2.25 8.7)
+			(end 2.75 8.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "3f4d36dd-6ed5-49d9-97b4-432a9f037686")
+		)
+		(fp_line
+			(start 2.75 3.2)
+			(end 2.25 3.2)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "51b61a18-d351-4da2-a0f7-4c479d4cf31b")
+		)
+		(fp_line
+			(start 2.75 8.7)
+			(end 2.75 3.2)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "3e1c84c4-b97e-4c3a-ba2b-676fa23550a9")
+		)
+		(fp_line
+			(start 3.64 -2.41)
+			(end 3.64 2.09)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "48e28f06-ad80-4179-b5bc-233dcc393805")
+		)
+		(fp_line
+			(start 3.64 2.09)
+			(end 1.25 2.09)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "0fcf8c4b-14fc-4d45-a410-8b9eba83380f")
+		)
+		(fp_line
+			(start 5.06 -2.41)
+			(end 3.64 -2.41)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2ea72f07-e475-46e9-9eef-35ad4e7f5e77")
+		)
+		(fp_line
+			(start 5.06 9.31)
+			(end 5.06 -2.41)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "32bc2514-f6c0-42a7-9dcf-8c59ae098fbd")
+		)
+		(fp_line
+			(start -2.95 -2.8)
+			(end -2.95 9.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "44fea5f9-75a5-4e0e-890e-2453bf860306")
+		)
+		(fp_line
+			(start -2.95 9.7)
+			(end 5.45 9.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "ebfa31f5-55f6-484c-bdc6-232e97a408f8")
+		)
+		(fp_line
+			(start 5.45 -2.8)
+			(end -2.95 -2.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "1e568c85-4151-40c5-9efb-91b8424b3ebd")
+		)
+		(fp_line
+			(start 5.45 9.7)
+			(end 5.45 -2.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "dd336754-b41c-4ec8-9b0e-4276ef651cc3")
+		)
+		(fp_line
+			(start -2.45 -2.3)
+			(end -1.25 -2.3)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "d4e35ad6-cb25-4458-91e1-ee73e5942f01")
+		)
+		(fp_line
+			(start -2.45 9.2)
+			(end -2.45 -2.3)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "c6ce4ca3-c7a5-4d99-8d48-196a2d353c1c")
+		)
+		(fp_line
+			(start -1.25 -2.3)
+			(end -1.25 2.2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "81e722a1-554f-403d-9d32-fb095d1c9bce")
+		)
+		(fp_line
+			(start -1.25 2.2)
+			(end 1.25 2.2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "96189959-f346-415d-9515-57e01a264b31")
+		)
+		(fp_line
+			(start -0.625 2.2)
+			(end 0 1.2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "025ff69e-d7e9-4e06-99c3-fe03c6b86b3f")
+		)
+		(fp_line
+			(start 0 1.2)
+			(end 0.625 2.2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "b8ecde99-9ab3-41d6-97bc-2bca0a427206")
+		)
+		(fp_line
+			(start 1.25 9.2)
+			(end -2.45 9.2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "ddbbe408-e952-4e7a-b380-42cfd53347ec")
+		)
+		(fp_line
+			(start 1.25 9.2)
+			(end 4.95 9.2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "4e897cc8-9cac-40d0-b08c-6e142c1c884f")
+		)
+		(fp_line
+			(start 3.75 -2.3)
+			(end 3.75 2.2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "449d8146-46bc-4fe2-adb4-012c1299a20e")
+		)
+		(fp_line
+			(start 3.75 2.2)
+			(end 1.25 2.2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "797dde62-abf0-44ea-ae53-2af1028d5a32")
+		)
+		(fp_line
+			(start 4.95 -2.3)
+			(end 3.75 -2.3)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "54264db0-8d46-4901-aa6a-af5024f4ba0b")
+		)
+		(fp_line
+			(start 4.95 9.2)
+			(end 4.95 -2.3)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "de616624-35a4-4136-b8ef-fe53a95a31af")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 1.25 3.45 0)
+			(layer "F.Fab")
+			(uuid "b11d9f59-38cb-4e58-9125-20b13b117259")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole roundrect
+			(at 0 0)
+			(size 1.7 2)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(roundrect_rratio 0.147059)
+			(net 24 "CLK")
+			(pinfunction "Pin_1")
+			(pintype "passive")
+			(uuid "750995f6-8622-4db3-b0e8-64cd1bed8972")
+		)
+		(pad "2" thru_hole oval
+			(at 2.5 0)
+			(size 1.7 2)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 21 "MR")
+			(pinfunction "Pin_2")
+			(pintype "passive")
+			(uuid "5463db05-10ee-40a8-ae17-f09483d80721")
+		)
+		(model "${KICAD8_3DMODEL_DIR}/Connector_JST.3dshapes/JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "LED_THT:LED_Rectangular_W3.0mm_H2.0mm"
 		(locked yes)
 		(layer "F.Cu")
@@ -1786,7 +2274,7 @@
 		(descr "16-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), Socket, LongPads")
 		(tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil Socket LongPads")
 		(property "Reference" "U4"
-			(at 3.81 -2.33 360)
+			(at 3.81 -2.33 0)
 			(layer "F.SilkS")
 			(uuid "45ae24a7-9197-4eb8-a718-774501d67739")
 			(effects
@@ -1797,7 +2285,7 @@
 			)
 		)
 		(property "Value" "74LS161"
-			(at 3.81 20.11 360)
+			(at 3.81 20.11 0)
 			(layer "F.Fab")
 			(uuid "40291154-43c2-44b4-af98-9a2bd10b04f4")
 			(effects
@@ -2083,7 +2571,7 @@
 			(uuid "2f42ebee-2696-4b1d-87c3-83a7cd533530")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 3.81 8.89 360)
+			(at 3.81 8.89 0)
 			(layer "F.Fab")
 			(uuid "cf0d1f61-803d-4767-b410-8a8f637443a8")
 			(effects
@@ -4134,7 +4622,7 @@
 		(descr "9-pin Resistor SIP pack")
 		(tags "R")
 		(property "Reference" "RN1"
-			(at 11.43 -2.4 360)
+			(at 11.43 -2.4 0)
 			(layer "F.SilkS")
 			(uuid "f6c1ac3d-2523-4e09-b3cc-e8c3933b6f39")
 			(effects
@@ -4145,7 +4633,7 @@
 			)
 		)
 		(property "Value" "R_Network08_US"
-			(at 11.43 2.4 360)
+			(at 11.43 2.4 0)
 			(layer "F.Fab")
 			(uuid "73b1d60d-f24b-4e72-abfa-8285f822a31c")
 			(effects
@@ -4340,7 +4828,7 @@
 			(uuid "dec7e3e6-2398-4c59-8853-f2bb9de99e35")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 10.16 0 360)
+			(at 10.16 0 0)
 			(layer "F.Fab")
 			(uuid "11689e87-01eb-4204-a3e8-67ca2080782e")
 			(effects
@@ -4529,7 +5017,6 @@
 			)
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
-		(path "/3b1c4d49-e90a-41eb-9a97-bf38e5a62010")
 		(sheetname "Root")
 		(sheetfile "Program_Counter.kicad_sch")
 		(attr through_hole)
@@ -7396,7 +7883,7 @@
 		(descr "16-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), Socket, LongPads")
 		(tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil Socket LongPads")
 		(property "Reference" "U1"
-			(at 3.81 -2.33 360)
+			(at 3.81 -2.33 0)
 			(layer "F.SilkS")
 			(uuid "37442cf3-9766-4de6-9767-689afa34824d")
 			(effects
@@ -7407,7 +7894,7 @@
 			)
 		)
 		(property "Value" "74LS161"
-			(at 3.81 20.11 360)
+			(at 3.81 20.11 0)
 			(layer "F.Fab")
 			(uuid "30a069a8-f2ba-4990-ba38-6c30e130a09d")
 			(effects
@@ -7693,7 +8180,7 @@
 			(uuid "c9a47749-fc11-4c4e-b478-97a223c5b6b3")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 3.81 8.89 360)
+			(at 3.81 8.89 0)
 			(layer "F.Fab")
 			(uuid "0d5567eb-9a87-4f54-b154-4667023ce3dd")
 			(effects
@@ -7898,7 +8385,7 @@
 		(descr "9-pin Resistor SIP pack")
 		(tags "R")
 		(property "Reference" "RN2"
-			(at 11.43 -2.4 360)
+			(at 11.43 -2.4 0)
 			(layer "F.SilkS")
 			(uuid "def94253-ccdd-4e8a-8bf7-8b90cf3b7877")
 			(effects
@@ -7909,7 +8396,7 @@
 			)
 		)
 		(property "Value" "R_Network08_US"
-			(at 11.43 2.4 360)
+			(at 11.43 2.4 0)
 			(layer "F.Fab")
 			(uuid "c9fae042-7d92-476d-b6f2-cb8c6b15e5ab")
 			(effects
@@ -8104,7 +8591,7 @@
 			(uuid "70555028-e90c-42cf-aa1a-4a327d83ec63")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 10.16 0 360)
+			(at 10.16 0 0)
 			(layer "F.Fab")
 			(uuid "048e0b24-ad63-4eb2-85aa-9f708aa0375c")
 			(effects
@@ -8439,7 +8926,7 @@
 		(descr "JST XH series connector, S2B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf), generated with kicad-footprint-generator")
 		(tags "connector JST XH horizontal")
 		(property "Reference" "J4"
-			(at 1.25 -3.5 360)
+			(at 1.25 -3.5 0)
 			(layer "F.SilkS")
 			(uuid "28f4862b-766e-4949-9e0f-471456aa18af")
 			(effects
@@ -8450,7 +8937,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Socket"
-			(at 1.25 10.4 360)
+			(at 1.25 10.4 0)
 			(layer "F.Fab")
 			(uuid "74e1e405-4e53-40f9-920c-28918f4323b9")
 			(effects
@@ -8875,7 +9362,7 @@
 			(uuid "15d4a734-a8dd-4ffc-91f3-5d4f5ce9de6d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.25 3.45 360)
+			(at 1.25 3.45 0)
 			(layer "F.Fab")
 			(uuid "eece9aaa-a41d-4c68-ba78-4abcfce8752d")
 			(effects
@@ -8927,7 +9414,7 @@
 		(descr "16-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), Socket, LongPads")
 		(tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil Socket LongPads")
 		(property "Reference" "U2"
-			(at 3.81 -2.33 360)
+			(at 3.81 -2.33 0)
 			(layer "F.SilkS")
 			(uuid "4fce04d6-f18a-48e3-bbd2-35f428597469")
 			(effects
@@ -8938,7 +9425,7 @@
 			)
 		)
 		(property "Value" "74LS161"
-			(at 3.81 20.11 360)
+			(at 3.81 20.11 0)
 			(layer "F.Fab")
 			(uuid "d6dee0c6-f7b8-4f0a-902f-253930e90eb6")
 			(effects
@@ -9224,7 +9711,7 @@
 			(uuid "6ff2c854-1f20-444a-968d-97ca5459610f")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 3.81 8.89 360)
+			(at 3.81 8.89 0)
 			(layer "F.Fab")
 			(uuid "1ce75e86-b8b4-4b24-aa66-d418b2432c64")
 			(effects
@@ -10301,7 +10788,7 @@
 		(descr "16-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), Socket, LongPads")
 		(tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil Socket LongPads")
 		(property "Reference" "U3"
-			(at 3.81 -2.33 360)
+			(at 3.81 -2.33 0)
 			(layer "F.SilkS")
 			(uuid "217c94bb-d817-4b04-909b-30ca70d45795")
 			(effects
@@ -10312,7 +10799,7 @@
 			)
 		)
 		(property "Value" "74LS161"
-			(at 3.81 20.11 360)
+			(at 3.81 20.11 0)
 			(layer "F.Fab")
 			(uuid "929f0526-4e66-4b60-95a5-ec5c12a7b07c")
 			(effects
@@ -10598,7 +11085,7 @@
 			(uuid "eee84bda-cd93-4384-878c-ed27f1f4600e")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 3.81 8.89 360)
+			(at 3.81 8.89 0)
 			(layer "F.Fab")
 			(uuid "f7513413-7c74-4cd2-8d60-6abbc8d34067")
 			(effects
