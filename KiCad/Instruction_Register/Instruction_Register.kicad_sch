@@ -8136,7 +8136,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 208.661 142.494 90)
 			(effects
 				(font
@@ -8409,7 +8409,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 232.791 142.494 90)
 			(effects
 				(font
@@ -9366,7 +9366,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 244.221 142.494 90)
 			(effects
 				(font
@@ -10409,7 +10409,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 240.411 142.494 90)
 			(effects
 				(font
@@ -10478,7 +10478,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 221.361 142.494 90)
 			(effects
 				(font
@@ -10682,7 +10682,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 180.086 142.494 90)
 			(effects
 				(font
@@ -10751,7 +10751,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 248.031 142.494 90)
 			(effects
 				(font
@@ -11227,7 +11227,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 236.601 142.494 90)
 			(effects
 				(font
@@ -11637,7 +11637,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 183.896 142.494 90)
 			(effects
 				(font
@@ -11706,7 +11706,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 176.276 142.494 90)
 			(effects
 				(font
@@ -11979,7 +11979,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 197.231 142.494 90)
 			(effects
 				(font
@@ -12210,16 +12210,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "ffc64834-fcdc-4b97-8e2a-fec3639b7308")
+			(uuid "ffc64834-fcdc-4b97-8e2a-fec3639b7309")
 		)
 		(pin "4"
-			(uuid "7cd940fc-7bf5-465a-ad80-acda5d34e7ce")
+			(uuid "7cd940fc-7bf5-465a-ad80-acda5d34e7cf")
 		)
 		(pin "2"
-			(uuid "3c04300d-f496-4070-8043-b2792ad68368")
+			(uuid "3c04300d-f496-4070-8043-b2792ad68369")
 		)
 		(pin "3"
-			(uuid "1a2c6c3d-37c5-4994-b788-32bf9ed0132d")
+			(uuid "1a2c6c3d-37c5-4994-b788-32bf9ed0132e")
 		)
 		(instances
 			(project ""
@@ -12322,7 +12322,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 201.041 142.494 90)
 			(effects
 				(font
@@ -13025,7 +13025,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 187.706 142.494 90)
 			(effects
 				(font
@@ -13636,7 +13636,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 217.551 142.494 90)
 			(effects
 				(font
@@ -13906,7 +13906,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 204.851 142.494 90)
 			(effects
 				(font

@@ -94,12 +94,6 @@ D = indicates the destination register
 
 (see [addressing modes](/Wiki/Modules/Instruction-Register.md#addressing-modes)) for more info
 
-## TODO's
-
-| Board         | Logisim   | SCH Design| SCH Test  | PCB Design| Order | Assemble  | Final Test    |
-| -----         | :-----:   | :--------:| :------:  | :-------: | ----- | --------  | ---------     |
-| Register File | YES       | YES       | YES       | YES       | NO    | NO        | NO            |
-
 ## Full diagram
 
 for the full gallery go to [Gallery](Wiki/Gallery.md)

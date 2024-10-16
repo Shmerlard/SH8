@@ -51,13 +51,7 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.0
-        }
-      ],
+      "diff_pair_dimensions": [],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -116,7 +110,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.2,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_hole_clearance": 0.25,
@@ -128,7 +122,7 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
+        "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
@@ -177,9 +171,7 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [
-        0.0
-      ],
+      "track_widths": [],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -206,12 +198,7 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [
-        {
-          "diameter": 0.0,
-          "drill": 0.0
-        }
-      ],
+      "via_dimensions": [],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -429,7 +416,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "error",
+      "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",
@@ -444,7 +431,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Instruction_Register.kicad_pro",
+    "filename": "ALU_Shifter.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -481,7 +468,7 @@
         "track_width": 0.4,
         "via_diameter": 0.6,
         "via_drill": 0.3,
-        "wire_width": 16
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -489,7 +476,7 @@
     },
     "net_colors": null,
     "netclass_assignments": {
-      "+5V": "VCC"
+      "VCC": "VCC"
     },
     "netclass_patterns": []
   },
@@ -498,7 +485,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "/home/elad/Desktop/SH8/KiCad/Instruction_Register/gerber/alpha/",
+      "plot": "/home/elad/Desktop/SH8/KiCad/ALU/ALU_Shifter/gerber/alpha/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -608,7 +595,7 @@
   },
   "sheets": [
     [
-      "cb0cd59a-7b8b-4e07-9160-6cf0a91ee8a4",
+      "c5df7c16-92df-4f63-be86-13ed031d5449",
       "Root"
     ]
   ],

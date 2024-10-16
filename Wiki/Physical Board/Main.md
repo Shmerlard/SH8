@@ -16,11 +16,12 @@ The whole CPU is divided into the following modules and boards:
     d. the SC board (1)\
     e. the TC board (1)
 
-3. ALU module (4):\
+3. ALU module (6):\
     a. X,Y register boards (2)\
-    b. ALU (1)\
-    c. Cycle enabler (1)
-
+    b. ALU Main(1)\
+    c. ALU Shifter(1)\
+    d. ALU Flags Calculator(1)\
+    e. ALU Extra(1)
 
 4. MEM and Control logic (3):\
     a. RAM and ROM board (1)

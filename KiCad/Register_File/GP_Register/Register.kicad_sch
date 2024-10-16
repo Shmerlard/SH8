@@ -3856,6 +3856,16 @@
 		)
 		(uuid "4059a297-579f-4b9b-b96f-02d5e6849350")
 	)
+	(wire
+		(pts
+			(xy 44.45 53.6575) (xy 39.37 53.6575)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "416a1805-e721-4204-9e07-29027cf04c03")
+	)
 	(bus
 		(pts
 			(xy 170.18 71.755) (xy 170.18 74.295)
@@ -4218,7 +4228,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.845 70.485) (xy 26.035 70.485)
+			(xy 29.845 79.375) (xy 26.035 79.375)
 		)
 		(stroke
 			(width 0)
@@ -4698,7 +4708,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.035 76.835) (xy 29.845 76.835)
+			(xy 26.035 85.725) (xy 29.845 85.725)
 		)
 		(stroke
 			(width 0)
@@ -4718,7 +4728,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.845 79.375) (xy 26.035 79.375)
+			(xy 29.845 88.265) (xy 26.035 88.265)
 		)
 		(stroke
 			(width 0)
@@ -5098,6 +5108,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 56.1975) (xy 39.37 56.1975)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eee9caac-75d2-488b-867a-713a90fb8980")
+	)
+	(wire
+		(pts
 			(xy 224.79 64.135) (xy 229.87 64.135)
 		)
 		(stroke
@@ -5218,7 +5238,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.035 67.945) (xy 29.845 67.945)
+			(xy 26.035 76.835) (xy 29.845 76.835)
 		)
 		(stroke
 			(width 0)
@@ -5280,7 +5300,7 @@
 	)
 	(rectangle
 		(start 18.415 44.704)
-		(end 50.165 83.185)
+		(end 51.435 105.0925)
 		(stroke
 			(width 0.254)
 			(type dash)
@@ -5428,7 +5448,7 @@
 		)
 		(uuid "80f76231-a486-4fc0-92a1-23bb70d0e74b")
 	)
-	(text "CTRL connectors\n"
+	(text "Connectors\n"
 		(exclude_from_sim no)
 		(at 18.415 42.545 0)
 		(effects
@@ -5620,7 +5640,7 @@
 		(uuid "1b8694b5-fed8-475c-8bcb-50554d5d4e7e")
 	)
 	(label "~{OE}"
-		(at 29.845 70.485 0)
+		(at 29.845 79.375 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6148,7 +6168,7 @@
 		(uuid "7aea6c7c-a021-4e45-9bc7-66784afc8f78")
 	)
 	(label "CLK"
-		(at 29.845 76.835 0)
+		(at 29.845 85.725 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6445,7 +6465,7 @@
 		(uuid "af9e9402-5ef5-4a8e-8e4c-70cdcfe2d0eb")
 	)
 	(label "RST"
-		(at 29.845 79.375 0)
+		(at 29.845 88.265 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6621,7 +6641,7 @@
 		(uuid "d653c03d-e1c9-4bdd-b4db-8c1008bfe533")
 	)
 	(label "~{DE}"
-		(at 29.845 67.945 0)
+		(at 29.845 76.835 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7836,7 +7856,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 60.6552 187.96 0)
 			(effects
 				(font
@@ -9076,6 +9096,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 44.45 53.6575 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2b19050a-b04d-4c27-93e6-c5b52c4f28bc")
+		(property "Reference" "#PWR049"
+			(at 44.45 57.4675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 44.45 48.5775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 44.45 53.6575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 53.6575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 44.45 53.6575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e688e9c3-91f1-4b0f-81a0-f253e840b480")
+		)
+		(instances
+			(project "Register"
+				(path "/577ba001-7098-4560-9ee0-3728f4b3ce23"
+					(reference "#PWR049")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 294.005 134.62 0)
 		(unit 1)
@@ -9215,7 +9301,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 20.955 76.835 0)
+		(at 20.955 85.725 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9223,7 +9309,7 @@
 		(dnp no)
 		(uuid "30060aeb-8499-4989-ae45-9bc6a5cb46f4")
 		(property "Reference" "J3"
-			(at 20.955 74.295 0)
+			(at 20.955 83.185 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9231,7 +9317,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Pin"
-			(at 21.59 74.295 0)
+			(at 21.59 83.185 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9239,8 +9325,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
-			(at 20.955 76.835 0)
+		(property "Footprint" "elad_jst:JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal_fixed"
+			(at 20.955 85.725 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9249,7 +9335,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 20.955 76.835 0)
+			(at 20.955 85.725 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9258,7 +9344,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 20.955 76.835 0)
+			(at 20.955 85.725 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10247,7 +10333,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 25.0952 187.96 0)
 			(effects
 				(font
@@ -10984,6 +11070,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 34.29 53.6575 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5f03ae17-6c27-427f-9e47-c07838927994")
+		(property "Reference" "J10"
+			(at 34.29 50.8635 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02_Pin"
+			(at 34.925 51.1175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "elad_jst:JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal_fixed"
+			(at 34.29 53.6575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 34.29 53.6575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 34.29 53.6575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "98940d34-dd7c-4754-9911-b11fd87d244d")
+		)
+		(pin "2"
+			(uuid "6c07edaa-8d52-4526-a9d6-404e83ee0ff8")
+		)
+		(instances
+			(project "Register"
+				(path "/577ba001-7098-4560-9ee0-3728f4b3ce23"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 24.13 168.91 0)
 		(unit 1)
@@ -11590,7 +11744,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 20.955 67.945 0)
+		(at 20.955 76.835 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11598,7 +11752,7 @@
 		(dnp no)
 		(uuid "753d25c1-79d9-443e-894d-c9ae59a4e827")
 		(property "Reference" "J2"
-			(at 20.955 65.151 0)
+			(at 20.955 74.041 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11606,7 +11760,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Pin"
-			(at 21.59 65.405 0)
+			(at 21.59 74.295 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11614,8 +11768,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
-			(at 20.955 67.945 0)
+		(property "Footprint" "elad_jst:JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal_fixed"
+			(at 20.955 76.835 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11624,7 +11778,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 20.955 67.945 0)
+			(at 20.955 76.835 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11633,7 +11787,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 20.955 67.945 0)
+			(at 20.955 76.835 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11683,7 +11837,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 51.7652 167.64 0)
 			(effects
 				(font
@@ -12074,7 +12228,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 51.7652 187.96 0)
 			(effects
 				(font
@@ -12143,7 +12297,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 33.9852 187.96 0)
 			(effects
 				(font
@@ -13009,7 +13163,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
+		(property "Footprint" "elad_jst:JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal_fixed"
 			(at 20.955 53.975 0)
 			(effects
 				(font
@@ -13353,7 +13507,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 41.6052 167.64 0)
 			(effects
 				(font
@@ -13840,7 +13994,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 25.0952 167.64 0)
 			(effects
 				(font
@@ -14076,6 +14230,72 @@
 			(project "Register"
 				(path "/577ba001-7098-4560-9ee0-3728f4b3ce23"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 44.45 56.1975 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cf93ba12-121a-46f4-acb3-39e20922c3ce")
+		(property "Reference" "#PWR050"
+			(at 44.45 62.5475 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 44.45 61.2775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 44.45 56.1975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 56.1975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 44.45 56.1975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3590ac56-b5ae-4666-9928-23b455846092")
+		)
+		(instances
+			(project "Register"
+				(path "/577ba001-7098-4560-9ee0-3728f4b3ce23"
+					(reference "#PWR050")
 					(unit 1)
 				)
 			)
@@ -15555,7 +15775,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 33.9852 167.64 0)
 			(effects
 				(font

@@ -23,3 +23,17 @@ Instruction_Register-backups
 /KiCad/Register_File/STATUS_REGISTER/STATUS_Register-backups
 /KiCad/Register_File/STATUS_REGISTER/STATUS_Register-backups
 /KiCad/Register_File/Register_File_Manager/gerber
+/KiCad/ALU/ALU_Extra/ALU_Extra-backups
+/KiCad/ALU/ALU_Extra/gerber
+/KiCad/ALU/ALU_FLAGS_CALC/ALU_FLAGS_CALC-backups
+/KiCad/ALU/ALU_FLAGS_CALC/gerber
+/KiCad/ALU/ALU_Main/ALU_Main-backups
+/KiCad/ALU/ALU_Main/gerber
+/KiCad/ALU/ALU_Shifter/ALU_Shifter-backups
+/KiCad/ALU/ALU_Shifter/gerber
+/KiCad/Condition_Control/Condition_Control-backups
+/KiCad/Condition_Control/gerber
+/KiCad/Instruction_Register/gerber
+*.kicad_sch-bak
+*.lck
+/KiCad/Register_File/GP_Register/Register-backups

@@ -116,7 +116,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.2,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_hole_clearance": 0.25,
@@ -128,7 +128,7 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
+        "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
@@ -444,7 +444,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Instruction_Register.kicad_pro",
+    "filename": "ALU_FLAGS_CALC.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -480,8 +480,8 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.4,
         "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 16
+        "via_drill": 0.4,
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -489,7 +489,7 @@
     },
     "net_colors": null,
     "netclass_assignments": {
-      "+5V": "VCC"
+      "VCC": "VCC"
     },
     "netclass_patterns": []
   },
@@ -498,7 +498,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "/home/elad/Desktop/SH8/KiCad/Instruction_Register/gerber/alpha/",
+      "plot": "/home/elad/Desktop/SH8/KiCad/ALU/ALU_FLAGS_CALC/gerber/alpha/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -608,7 +608,7 @@
   },
   "sheets": [
     [
-      "cb0cd59a-7b8b-4e07-9160-6cf0a91ee8a4",
+      "2231f4e4-4280-493a-bed3-b441978fd3ae",
       "Root"
     ]
   ],

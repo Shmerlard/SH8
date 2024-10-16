@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.8,
+          "height": 1.6,
+          "width": 2.4
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -51,13 +51,7 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.0
-        }
-      ],
+      "diff_pair_dimensions": [],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -177,9 +171,7 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [
-        0.0
-      ],
+      "track_widths": [],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -206,12 +198,7 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [
-        {
-          "diameter": 0.0,
-          "drill": 0.0
-        }
-      ],
+      "via_dimensions": [],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -429,7 +416,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "error",
+      "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",
@@ -444,7 +431,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Instruction_Register.kicad_pro",
+    "filename": "ALU_Extra.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -465,32 +452,13 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "VCC",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.4,
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 16
       }
     ],
     "meta": {
       "version": 3
     },
     "net_colors": null,
-    "netclass_assignments": {
-      "+5V": "VCC"
-    },
+    "netclass_assignments": null,
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -498,7 +466,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "/home/elad/Desktop/SH8/KiCad/Instruction_Register/gerber/alpha/",
+      "plot": "/home/elad/Desktop/SH8/KiCad/ALU/ALU_Extra/gerber/alpha/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -608,7 +576,7 @@
   },
   "sheets": [
     [
-      "cb0cd59a-7b8b-4e07-9160-6cf0a91ee8a4",
+      "826bba4f-58fa-4739-89a2-c34a0e54b37f",
       "Root"
     ]
   ],

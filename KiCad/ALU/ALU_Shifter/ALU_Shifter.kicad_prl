@@ -1,22 +1,20 @@
 {
   "board": {
-    "active_layer": 0,
+    "active_layer": 31,
     "active_layer_preset": "All Layers",
     "auto_track_width": true,
-    "hidden_netclasses": [
-      "+5V"
-    ],
+    "hidden_netclasses": [],
     "hidden_nets": [
-      "+5V"
+      "GND"
     ],
     "high_contrast_mode": 0,
     "net_color_mode": 1,
     "opacity": {
-      "images": 0.6399999856948853,
+      "images": 0.6,
       "pads": 1.0,
-      "tracks": 0.8299999833106995,
+      "tracks": 1.0,
       "vias": 1.0,
-      "zones": 0.6600000262260437
+      "zones": 0.6
     },
     "selection_filter": {
       "dimensions": true,
@@ -65,10 +63,11 @@
       34,
       35,
       36,
+      39,
       40
     ],
     "visible_layers": "fffffff_ffffffff",
-    "zone_display_mode": 0
+    "zone_display_mode": 1
   },
   "git": {
     "repo_password": "",
@@ -77,7 +76,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "Register.kicad_prl",
+    "filename": "ALU_Shifter.kicad_prl",
     "version": 3
   },
   "project": {
