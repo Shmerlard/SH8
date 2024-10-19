@@ -2,7 +2,7 @@
 syntax keyword sh8Keyword dw
 syntax match sh8Directive /\.org/
 
-syntax keyword sh8Instruction MOV CALL JMP RET
+syntax keyword sh8Instruction MOV CALL JMP RET AND
 syntax match sh8Register /\b@\=R\d\+\b/
 syntax match sh8HexNumber /0x[0-9A-Fa-f]\+/
 syntax match sh8Immediate /#[0-9A-Fa-fx]\+/

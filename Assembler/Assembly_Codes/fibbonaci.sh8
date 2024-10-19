@@ -1,0 +1,24 @@
+.org 0x0
+
+start:
+    MOV #0 R4
+    MOV #1 R5
+
+loop:
+    MOV R3 R6
+    AND #0x0100 R6
+    JZ loop
+
+fib:
+    CMP #0 R6
+    JZ finish
+    MOV R5 R7
+    ADD R4 R5
+    MOV R7 R4
+    JMP fib
+
+
+
+finish:
+    JMP finish
+

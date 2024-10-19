@@ -39,7 +39,7 @@ this type is used by `ST`
 ```text
 0x0: Ra  @Rb            | ST Ra @Rb: Ra -> M[Rb]
 0x1: Ra  #N             | ST Ra #N: Ra -> M[#N]
-0x2: #N  @Rb            | ST #N #K: #N -> M[#K]
+0x2: #N  @Rb            | ST #N @Rb: #N -> M[M[Rb]]
 0x3: Ra  N              | ST Ra N: Ra -> M[M[#N]]
 ```
 

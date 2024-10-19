@@ -1,4 +1,4 @@
-23871281871198416
+23867823884187834
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -96739,17 +96739,3 @@ Varistor VF
 0
 2
 2
-elad_jst
-JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal_fixed
-JST XH series connector, S2B-XH-A-1 (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf), generated with kicad-footprint-generator
-connector JST XH horizontal
-0
-2
-2
-elad_jst
-jst_xh_s8b_smd
-
-
-0
-8
-8
